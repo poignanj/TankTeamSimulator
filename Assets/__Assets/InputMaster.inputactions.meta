@@ -1,0 +1,24 @@
+fileFormatVersion: 2
+guid: 311b79feb6b4c9a4c8c5f6dcb31b175c
+ScriptedImporter:
+  fileIDToRecycleName:
+    11400000: <root>
+    11400002: PilotTank/MoveRightLever
+    11400004: PilotTank/MoveLeftLever
+    11400008: ChiefControls/Click
+    11400010: Artillery/RotateY
+    11400012: Artillery/RotateX
+    11400014: ChiefControls/LookAround
+  externalObjects: {}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+  script: {fileID: 11500000, guid: e2fdc6edf8744b38b702a2a5ee3541b2, type: 3}
+  generateWrapperCode: 1
+  wrapperCodePath: Assets/__Scripts/inputs/InputMaster.cs
+  wrapperClassName: InputMaster
+  wrapperCodeNamespace: 
+  generateActionEvents: 1
+  generateInterfaces: 1
+  actionGuids: []
+  actionMapGuids: []
