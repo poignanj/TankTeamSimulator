@@ -4393,9 +4393,8 @@ MonoBehaviour:
         m_Calls: []
       m_TypeName: InputMaster+ActionEvent, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
         PublicKeyToken=null
-  turret: {fileID: 190716}
-  turnIncrement: 0
-  aimIncrement: 0
+  turret: {fileID: 462006}
+  barrel: {fileID: 448930}
 --- !u!1 &180366
 GameObject:
   m_ObjectHideFlags: 0
