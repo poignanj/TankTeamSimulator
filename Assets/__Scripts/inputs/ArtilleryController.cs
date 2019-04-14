@@ -6,8 +6,8 @@ using UnityEngine.Experimental.Input;
 public class ArtilleryController : MonoBehaviour, IArtilleryActions
 {
     [SerializeField] private InputMaster inputMaster;
-    [SerializeField] private GameObject turret;
-    [Space] [SerializeField] private float turnIncrement = 0, aimIncrement = 0;
+    [SerializeField] private Transform turret, barrel;
+    private float turnIncrement = 0, aimIncrement = 0;
 
     private void Awake()
     {
@@ -25,7 +25,10 @@ public class ArtilleryController : MonoBehaviour, IArtilleryActions
 
     private void Update()
     {
+
         turret.transform.Rotate(new Vector3(0, 0, 1), turnIncrement);
+        if(barrel.transform.rotation.x + aimIncrement < 0 && barrel.transform.rotation.x + aimIncrement > -45)
+            barrel.transform.Rotate(new Vector3(1, 0, 0), aimIncrement);
     }
     public void OnRotateX(InputAction.CallbackContext context)
     {
