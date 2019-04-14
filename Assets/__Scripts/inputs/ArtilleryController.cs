@@ -27,7 +27,8 @@ public class ArtilleryController : MonoBehaviour, IArtilleryActions
     {
 
         turret.transform.Rotate(new Vector3(0, 0, 1), turnIncrement);
-        if(barrel.transform.rotation.x + aimIncrement < 0 && barrel.transform.rotation.x + aimIncrement > -45)
+        Debug.Log((int) barrel.transform.localEulerAngles.x + " wtf " + aimIncrement);
+        if(barrel.transform.localEulerAngles.x + aimIncrement < 15 || barrel.transform.localEulerAngles.x + aimIncrement > 340)
             barrel.transform.Rotate(new Vector3(1, 0, 0), aimIncrement);
     }
     public void OnRotateX(InputAction.CallbackContext context)
@@ -43,6 +44,6 @@ public class ArtilleryController : MonoBehaviour, IArtilleryActions
         //Todo: Rotate canon (up&down)
         var direction = context.ReadValue<Vector2>();
         //Warning: Calculate rotation first (stick from gamepad)
-        aimIncrement = direction[0];
+        aimIncrement = direction[1];
     }
 }
