@@ -60,7 +60,6 @@ public class PilotController : MonoBehaviour, IPilotTankActions
 
     private void EngineAudio()
     {
-        Debug.Log(engine.velocity);
         // If there is no input (the tank is stationary)...
         if (Mathf.Abs(engine.velocity.x)<0.2 && Mathf.Abs(engine.velocity.y) < 0.2 && Mathf.Abs(engine.velocity.z) < 0.2)
         {
