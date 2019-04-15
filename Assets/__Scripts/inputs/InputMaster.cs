@@ -67,6 +67,20 @@ public class InputMaster : InputActionAssetReference
             m_Artillery_RotateX.performed += m_ArtilleryRotateXActionPerformed.Invoke;
         if (m_ArtilleryRotateXActionCancelled != null)
             m_Artillery_RotateX.cancelled += m_ArtilleryRotateXActionCancelled.Invoke;
+        m_Artillery_Fire = m_Artillery.GetAction("Fire");
+        if (m_ArtilleryFireActionStarted != null)
+            m_Artillery_Fire.started += m_ArtilleryFireActionStarted.Invoke;
+        if (m_ArtilleryFireActionPerformed != null)
+            m_Artillery_Fire.performed += m_ArtilleryFireActionPerformed.Invoke;
+        if (m_ArtilleryFireActionCancelled != null)
+            m_Artillery_Fire.cancelled += m_ArtilleryFireActionCancelled.Invoke;
+        m_Artillery_Reload = m_Artillery.GetAction("Reload");
+        if (m_ArtilleryReloadActionStarted != null)
+            m_Artillery_Reload.started += m_ArtilleryReloadActionStarted.Invoke;
+        if (m_ArtilleryReloadActionPerformed != null)
+            m_Artillery_Reload.performed += m_ArtilleryReloadActionPerformed.Invoke;
+        if (m_ArtilleryReloadActionCancelled != null)
+            m_Artillery_Reload.cancelled += m_ArtilleryReloadActionCancelled.Invoke;
         m_Initialized = true;
     }
     private void Uninitialize()
@@ -128,6 +142,20 @@ public class InputMaster : InputActionAssetReference
             m_Artillery_RotateX.performed -= m_ArtilleryRotateXActionPerformed.Invoke;
         if (m_ArtilleryRotateXActionCancelled != null)
             m_Artillery_RotateX.cancelled -= m_ArtilleryRotateXActionCancelled.Invoke;
+        m_Artillery_Fire = null;
+        if (m_ArtilleryFireActionStarted != null)
+            m_Artillery_Fire.started -= m_ArtilleryFireActionStarted.Invoke;
+        if (m_ArtilleryFireActionPerformed != null)
+            m_Artillery_Fire.performed -= m_ArtilleryFireActionPerformed.Invoke;
+        if (m_ArtilleryFireActionCancelled != null)
+            m_Artillery_Fire.cancelled -= m_ArtilleryFireActionCancelled.Invoke;
+        m_Artillery_Reload = null;
+        if (m_ArtilleryReloadActionStarted != null)
+            m_Artillery_Reload.started -= m_ArtilleryReloadActionStarted.Invoke;
+        if (m_ArtilleryReloadActionPerformed != null)
+            m_Artillery_Reload.performed -= m_ArtilleryReloadActionPerformed.Invoke;
+        if (m_ArtilleryReloadActionCancelled != null)
+            m_Artillery_Reload.cancelled -= m_ArtilleryReloadActionCancelled.Invoke;
         m_Initialized = false;
     }
     public void SetAsset(InputActionAsset newAsset)
@@ -277,6 +305,14 @@ public class InputMaster : InputActionAssetReference
     [SerializeField] private ActionEvent m_ArtilleryRotateXActionStarted;
     [SerializeField] private ActionEvent m_ArtilleryRotateXActionPerformed;
     [SerializeField] private ActionEvent m_ArtilleryRotateXActionCancelled;
+    private InputAction m_Artillery_Fire;
+    [SerializeField] private ActionEvent m_ArtilleryFireActionStarted;
+    [SerializeField] private ActionEvent m_ArtilleryFireActionPerformed;
+    [SerializeField] private ActionEvent m_ArtilleryFireActionCancelled;
+    private InputAction m_Artillery_Reload;
+    [SerializeField] private ActionEvent m_ArtilleryReloadActionStarted;
+    [SerializeField] private ActionEvent m_ArtilleryReloadActionPerformed;
+    [SerializeField] private ActionEvent m_ArtilleryReloadActionCancelled;
     public struct ArtilleryActions
     {
         private InputMaster m_Wrapper;
@@ -289,6 +325,14 @@ public class InputMaster : InputActionAssetReference
         public ActionEvent RotateXStarted { get { return m_Wrapper.m_ArtilleryRotateXActionStarted; } }
         public ActionEvent RotateXPerformed { get { return m_Wrapper.m_ArtilleryRotateXActionPerformed; } }
         public ActionEvent RotateXCancelled { get { return m_Wrapper.m_ArtilleryRotateXActionCancelled; } }
+        public InputAction @Fire { get { return m_Wrapper.m_Artillery_Fire; } }
+        public ActionEvent FireStarted { get { return m_Wrapper.m_ArtilleryFireActionStarted; } }
+        public ActionEvent FirePerformed { get { return m_Wrapper.m_ArtilleryFireActionPerformed; } }
+        public ActionEvent FireCancelled { get { return m_Wrapper.m_ArtilleryFireActionCancelled; } }
+        public InputAction @Reload { get { return m_Wrapper.m_Artillery_Reload; } }
+        public ActionEvent ReloadStarted { get { return m_Wrapper.m_ArtilleryReloadActionStarted; } }
+        public ActionEvent ReloadPerformed { get { return m_Wrapper.m_ArtilleryReloadActionPerformed; } }
+        public ActionEvent ReloadCancelled { get { return m_Wrapper.m_ArtilleryReloadActionCancelled; } }
         public InputActionMap Get() { return m_Wrapper.m_Artillery; }
         public void Enable() { Get().Enable(); }
         public void Disable() { Get().Disable(); }
@@ -305,6 +349,12 @@ public class InputMaster : InputActionAssetReference
                 RotateX.started -= m_Wrapper.m_ArtilleryActionsCallbackInterface.OnRotateX;
                 RotateX.performed -= m_Wrapper.m_ArtilleryActionsCallbackInterface.OnRotateX;
                 RotateX.cancelled -= m_Wrapper.m_ArtilleryActionsCallbackInterface.OnRotateX;
+                Fire.started -= m_Wrapper.m_ArtilleryActionsCallbackInterface.OnFire;
+                Fire.performed -= m_Wrapper.m_ArtilleryActionsCallbackInterface.OnFire;
+                Fire.cancelled -= m_Wrapper.m_ArtilleryActionsCallbackInterface.OnFire;
+                Reload.started -= m_Wrapper.m_ArtilleryActionsCallbackInterface.OnReload;
+                Reload.performed -= m_Wrapper.m_ArtilleryActionsCallbackInterface.OnReload;
+                Reload.cancelled -= m_Wrapper.m_ArtilleryActionsCallbackInterface.OnReload;
             }
             m_Wrapper.m_ArtilleryActionsCallbackInterface = instance;
             if (instance != null)
@@ -315,6 +365,12 @@ public class InputMaster : InputActionAssetReference
                 RotateX.started += instance.OnRotateX;
                 RotateX.performed += instance.OnRotateX;
                 RotateX.cancelled += instance.OnRotateX;
+                Fire.started += instance.OnFire;
+                Fire.performed += instance.OnFire;
+                Fire.cancelled += instance.OnFire;
+                Reload.started += instance.OnReload;
+                Reload.performed += instance.OnReload;
+                Reload.cancelled += instance.OnReload;
             }
         }
     }
@@ -355,4 +411,6 @@ public interface IArtilleryActions
 {
     void OnRotateY(InputAction.CallbackContext context);
     void OnRotateX(InputAction.CallbackContext context);
+    void OnFire(InputAction.CallbackContext context);
+    void OnReload(InputAction.CallbackContext context);
 }

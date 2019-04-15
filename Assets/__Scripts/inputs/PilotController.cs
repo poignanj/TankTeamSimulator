@@ -41,7 +41,7 @@ public class PilotController : MonoBehaviour, IPilotTankActions
         //todo: Adjust speed scaling (percentile?)
         engine.velocity.Set(0, 0, 0);
         engine.AddForceAtPosition(this.transform.forward.normalized * leftSpeed, leftTrack.position);
-        engine.AddForceAtPosition(this.transform.forward.normalized * rightSpeed, rightTrack.position);            EngineAudio ();
+        engine.AddForceAtPosition(this.transform.forward.normalized * rightSpeed, rightTrack.position);
         EngineAudio();
     }
 

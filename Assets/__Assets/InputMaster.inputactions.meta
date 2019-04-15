@@ -5,10 +5,12 @@ ScriptedImporter:
     11400000: <root>
     11400002: PilotTank/MoveRightLever
     11400004: PilotTank/MoveLeftLever
+    11400006: Artillery/Fire
     11400008: ChiefControls/Click
     11400010: Artillery/RotateY
     11400012: Artillery/RotateX
     11400014: ChiefControls/LookAround
+    11400016: Artillery/Reload
   externalObjects: {}
   userData: 
   assetBundleName: 
