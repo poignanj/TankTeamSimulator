@@ -49,10 +49,10 @@
                     "name": "Stop All",
                     "id": "8e7137fa-e2e2-489c-96df-f5711380f662",
                     "expectedControlLayout": "",
-                    "continuous": true,
+                    "continuous": false,
                     "passThrough": false,
                     "processors": "",
-                    "interactions": "",
+                    "interactions": "Press(behavior=2)",
                     "bindings": []
                 }
             ],

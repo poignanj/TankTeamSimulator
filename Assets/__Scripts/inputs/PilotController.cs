@@ -14,7 +14,8 @@ public class PilotController : MonoBehaviour, IPilotTankActions
 
     [SerializeField] private InputMaster inputMaster;
     [SerializeField] public Transform leftTrack, rightTrack;
-    [Space][SerializeField] private float leftSpeed = 0, rightSpeed = 0;
+    [Space] [SerializeField] private float leftSpeed = 0, rightSpeed = 0, leftfloatspeed = 0, rightfloatspeed = 0;
+    private bool onHold = false;
     private Rigidbody engine;
     private void Awake()
     {
@@ -59,8 +60,24 @@ public class PilotController : MonoBehaviour, IPilotTankActions
 
     public void OnStopAll(InputAction.CallbackContext context)
     {
-        rightSpeed = 0;
-        leftSpeed = 0;
+        if (!onHold)
+        {
+            Debug.Log("put on hold");
+            rightfloatspeed = rightSpeed;
+            leftfloatspeed = leftSpeed;
+            rightSpeed = 0;
+            leftSpeed = 0;
+            onHold = true;
+        }
+        else
+        {
+            Debug.Log("release hold");
+            rightSpeed = rightfloatspeed;
+            leftSpeed = leftfloatspeed;
+            onHold = false;
+        }
+        
+        
     }
 
     public void OnStopLeft(InputAction.CallbackContext context)
@@ -76,6 +93,7 @@ public class PilotController : MonoBehaviour, IPilotTankActions
     }
     public void OnStopRight(InputAction.CallbackContext context)
     {
+        
         rightSpeed = 0;
         if (leftSpeed > 50)
         {
