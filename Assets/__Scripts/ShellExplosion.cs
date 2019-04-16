@@ -30,7 +30,10 @@ using UnityEngine;
             Debug.Log("JAI COLLIDE "+colliders[i].name);
             // ... and find their rigidbody.
             Rigidbody targetRigidbody = colliders[i].GetComponent<Rigidbody> ();
-
+            Rigidbody parentTry = colliders[i].GetComponentInParent<Rigidbody>();
+            if (parentTry)
+                Debug.Log("je trouve " + parentTry.name);
+            //Debug.Log("je trouve " + parentTry.name);
                 // If they don't have a rigidbody, go on to the next collider.
                 if (!targetRigidbody)
                     continue;
