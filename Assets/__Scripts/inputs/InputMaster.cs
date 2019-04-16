@@ -35,6 +35,27 @@ public class InputMaster : InputActionAssetReference
             m_PilotTank_MoveLeftLever.performed += m_PilotTankMoveLeftLeverActionPerformed.Invoke;
         if (m_PilotTankMoveLeftLeverActionCancelled != null)
             m_PilotTank_MoveLeftLever.cancelled += m_PilotTankMoveLeftLeverActionCancelled.Invoke;
+        m_PilotTank_StopLeft = m_PilotTank.GetAction("Stop Left");
+        if (m_PilotTankStopLeftActionStarted != null)
+            m_PilotTank_StopLeft.started += m_PilotTankStopLeftActionStarted.Invoke;
+        if (m_PilotTankStopLeftActionPerformed != null)
+            m_PilotTank_StopLeft.performed += m_PilotTankStopLeftActionPerformed.Invoke;
+        if (m_PilotTankStopLeftActionCancelled != null)
+            m_PilotTank_StopLeft.cancelled += m_PilotTankStopLeftActionCancelled.Invoke;
+        m_PilotTank_StopRight = m_PilotTank.GetAction("Stop Right");
+        if (m_PilotTankStopRightActionStarted != null)
+            m_PilotTank_StopRight.started += m_PilotTankStopRightActionStarted.Invoke;
+        if (m_PilotTankStopRightActionPerformed != null)
+            m_PilotTank_StopRight.performed += m_PilotTankStopRightActionPerformed.Invoke;
+        if (m_PilotTankStopRightActionCancelled != null)
+            m_PilotTank_StopRight.cancelled += m_PilotTankStopRightActionCancelled.Invoke;
+        m_PilotTank_StopAll = m_PilotTank.GetAction("Stop All");
+        if (m_PilotTankStopAllActionStarted != null)
+            m_PilotTank_StopAll.started += m_PilotTankStopAllActionStarted.Invoke;
+        if (m_PilotTankStopAllActionPerformed != null)
+            m_PilotTank_StopAll.performed += m_PilotTankStopAllActionPerformed.Invoke;
+        if (m_PilotTankStopAllActionCancelled != null)
+            m_PilotTank_StopAll.cancelled += m_PilotTankStopAllActionCancelled.Invoke;
         // ChiefControls
         m_ChiefControls = asset.GetActionMap("ChiefControls");
         m_ChiefControls_Click = m_ChiefControls.GetAction("Click");
@@ -104,6 +125,27 @@ public class InputMaster : InputActionAssetReference
             m_PilotTank_MoveLeftLever.performed -= m_PilotTankMoveLeftLeverActionPerformed.Invoke;
         if (m_PilotTankMoveLeftLeverActionCancelled != null)
             m_PilotTank_MoveLeftLever.cancelled -= m_PilotTankMoveLeftLeverActionCancelled.Invoke;
+        m_PilotTank_StopLeft = null;
+        if (m_PilotTankStopLeftActionStarted != null)
+            m_PilotTank_StopLeft.started -= m_PilotTankStopLeftActionStarted.Invoke;
+        if (m_PilotTankStopLeftActionPerformed != null)
+            m_PilotTank_StopLeft.performed -= m_PilotTankStopLeftActionPerformed.Invoke;
+        if (m_PilotTankStopLeftActionCancelled != null)
+            m_PilotTank_StopLeft.cancelled -= m_PilotTankStopLeftActionCancelled.Invoke;
+        m_PilotTank_StopRight = null;
+        if (m_PilotTankStopRightActionStarted != null)
+            m_PilotTank_StopRight.started -= m_PilotTankStopRightActionStarted.Invoke;
+        if (m_PilotTankStopRightActionPerformed != null)
+            m_PilotTank_StopRight.performed -= m_PilotTankStopRightActionPerformed.Invoke;
+        if (m_PilotTankStopRightActionCancelled != null)
+            m_PilotTank_StopRight.cancelled -= m_PilotTankStopRightActionCancelled.Invoke;
+        m_PilotTank_StopAll = null;
+        if (m_PilotTankStopAllActionStarted != null)
+            m_PilotTank_StopAll.started -= m_PilotTankStopAllActionStarted.Invoke;
+        if (m_PilotTankStopAllActionPerformed != null)
+            m_PilotTank_StopAll.performed -= m_PilotTankStopAllActionPerformed.Invoke;
+        if (m_PilotTankStopAllActionCancelled != null)
+            m_PilotTank_StopAll.cancelled -= m_PilotTankStopAllActionCancelled.Invoke;
         if (m_ChiefControlsActionsCallbackInterface != null)
         {
             ChiefControls.SetCallbacks(null);
@@ -185,6 +227,18 @@ public class InputMaster : InputActionAssetReference
     [SerializeField] private ActionEvent m_PilotTankMoveLeftLeverActionStarted;
     [SerializeField] private ActionEvent m_PilotTankMoveLeftLeverActionPerformed;
     [SerializeField] private ActionEvent m_PilotTankMoveLeftLeverActionCancelled;
+    private InputAction m_PilotTank_StopLeft;
+    [SerializeField] private ActionEvent m_PilotTankStopLeftActionStarted;
+    [SerializeField] private ActionEvent m_PilotTankStopLeftActionPerformed;
+    [SerializeField] private ActionEvent m_PilotTankStopLeftActionCancelled;
+    private InputAction m_PilotTank_StopRight;
+    [SerializeField] private ActionEvent m_PilotTankStopRightActionStarted;
+    [SerializeField] private ActionEvent m_PilotTankStopRightActionPerformed;
+    [SerializeField] private ActionEvent m_PilotTankStopRightActionCancelled;
+    private InputAction m_PilotTank_StopAll;
+    [SerializeField] private ActionEvent m_PilotTankStopAllActionStarted;
+    [SerializeField] private ActionEvent m_PilotTankStopAllActionPerformed;
+    [SerializeField] private ActionEvent m_PilotTankStopAllActionCancelled;
     public struct PilotTankActions
     {
         private InputMaster m_Wrapper;
@@ -197,6 +251,18 @@ public class InputMaster : InputActionAssetReference
         public ActionEvent MoveLeftLeverStarted { get { return m_Wrapper.m_PilotTankMoveLeftLeverActionStarted; } }
         public ActionEvent MoveLeftLeverPerformed { get { return m_Wrapper.m_PilotTankMoveLeftLeverActionPerformed; } }
         public ActionEvent MoveLeftLeverCancelled { get { return m_Wrapper.m_PilotTankMoveLeftLeverActionCancelled; } }
+        public InputAction @StopLeft { get { return m_Wrapper.m_PilotTank_StopLeft; } }
+        public ActionEvent StopLeftStarted { get { return m_Wrapper.m_PilotTankStopLeftActionStarted; } }
+        public ActionEvent StopLeftPerformed { get { return m_Wrapper.m_PilotTankStopLeftActionPerformed; } }
+        public ActionEvent StopLeftCancelled { get { return m_Wrapper.m_PilotTankStopLeftActionCancelled; } }
+        public InputAction @StopRight { get { return m_Wrapper.m_PilotTank_StopRight; } }
+        public ActionEvent StopRightStarted { get { return m_Wrapper.m_PilotTankStopRightActionStarted; } }
+        public ActionEvent StopRightPerformed { get { return m_Wrapper.m_PilotTankStopRightActionPerformed; } }
+        public ActionEvent StopRightCancelled { get { return m_Wrapper.m_PilotTankStopRightActionCancelled; } }
+        public InputAction @StopAll { get { return m_Wrapper.m_PilotTank_StopAll; } }
+        public ActionEvent StopAllStarted { get { return m_Wrapper.m_PilotTankStopAllActionStarted; } }
+        public ActionEvent StopAllPerformed { get { return m_Wrapper.m_PilotTankStopAllActionPerformed; } }
+        public ActionEvent StopAllCancelled { get { return m_Wrapper.m_PilotTankStopAllActionCancelled; } }
         public InputActionMap Get() { return m_Wrapper.m_PilotTank; }
         public void Enable() { Get().Enable(); }
         public void Disable() { Get().Disable(); }
@@ -213,6 +279,15 @@ public class InputMaster : InputActionAssetReference
                 MoveLeftLever.started -= m_Wrapper.m_PilotTankActionsCallbackInterface.OnMoveLeftLever;
                 MoveLeftLever.performed -= m_Wrapper.m_PilotTankActionsCallbackInterface.OnMoveLeftLever;
                 MoveLeftLever.cancelled -= m_Wrapper.m_PilotTankActionsCallbackInterface.OnMoveLeftLever;
+                StopLeft.started -= m_Wrapper.m_PilotTankActionsCallbackInterface.OnStopLeft;
+                StopLeft.performed -= m_Wrapper.m_PilotTankActionsCallbackInterface.OnStopLeft;
+                StopLeft.cancelled -= m_Wrapper.m_PilotTankActionsCallbackInterface.OnStopLeft;
+                StopRight.started -= m_Wrapper.m_PilotTankActionsCallbackInterface.OnStopRight;
+                StopRight.performed -= m_Wrapper.m_PilotTankActionsCallbackInterface.OnStopRight;
+                StopRight.cancelled -= m_Wrapper.m_PilotTankActionsCallbackInterface.OnStopRight;
+                StopAll.started -= m_Wrapper.m_PilotTankActionsCallbackInterface.OnStopAll;
+                StopAll.performed -= m_Wrapper.m_PilotTankActionsCallbackInterface.OnStopAll;
+                StopAll.cancelled -= m_Wrapper.m_PilotTankActionsCallbackInterface.OnStopAll;
             }
             m_Wrapper.m_PilotTankActionsCallbackInterface = instance;
             if (instance != null)
@@ -223,6 +298,15 @@ public class InputMaster : InputActionAssetReference
                 MoveLeftLever.started += instance.OnMoveLeftLever;
                 MoveLeftLever.performed += instance.OnMoveLeftLever;
                 MoveLeftLever.cancelled += instance.OnMoveLeftLever;
+                StopLeft.started += instance.OnStopLeft;
+                StopLeft.performed += instance.OnStopLeft;
+                StopLeft.cancelled += instance.OnStopLeft;
+                StopRight.started += instance.OnStopRight;
+                StopRight.performed += instance.OnStopRight;
+                StopRight.cancelled += instance.OnStopRight;
+                StopAll.started += instance.OnStopAll;
+                StopAll.performed += instance.OnStopAll;
+                StopAll.cancelled += instance.OnStopAll;
             }
         }
     }
@@ -401,6 +485,9 @@ public interface IPilotTankActions
 {
     void OnMoveRightLever(InputAction.CallbackContext context);
     void OnMoveLeftLever(InputAction.CallbackContext context);
+    void OnStopLeft(InputAction.CallbackContext context);
+    void OnStopRight(InputAction.CallbackContext context);
+    void OnStopAll(InputAction.CallbackContext context);
 }
 public interface IChiefControlsActions
 {

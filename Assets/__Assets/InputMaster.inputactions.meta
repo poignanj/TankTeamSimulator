@@ -11,6 +11,9 @@ ScriptedImporter:
     11400012: Artillery/RotateX
     11400014: ChiefControls/LookAround
     11400016: Artillery/Reload
+    11400018: PilotTank/Stop Left
+    11400020: PilotTank/Stop Right
+    11400024: PilotTank/Stop All
   externalObjects: {}
   userData: 
   assetBundleName: 

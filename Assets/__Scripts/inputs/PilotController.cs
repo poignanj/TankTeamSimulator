@@ -57,6 +57,35 @@ public class PilotController : MonoBehaviour, IPilotTankActions
         rightSpeed += direction;
     }
 
+    public void OnStopAll(InputAction.CallbackContext context)
+    {
+        rightSpeed = 0;
+        leftSpeed = 0;
+    }
+
+    public void OnStopLeft(InputAction.CallbackContext context)
+    {
+        leftSpeed = 0;
+        if (rightSpeed > 50)
+        {
+            rightSpeed = 50;
+        }else if (rightSpeed < -50)
+        {
+            rightSpeed = -50;
+        }
+    }
+    public void OnStopRight(InputAction.CallbackContext context)
+    {
+        rightSpeed = 0;
+        if (leftSpeed > 50)
+        {
+            leftSpeed = 50;
+        }
+        else if (leftSpeed < -50)
+        {
+            leftSpeed = -50;
+        }
+    }
 
     private void EngineAudio()
     {
