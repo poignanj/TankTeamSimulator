@@ -6,8 +6,9 @@ public class CompassGunner : MonoBehaviour
 	public Transform turret;
     public Transform tank;
 	public Text CompassDirectionText;
-
-	public void Update()
+    public Text TargetDirectionText;
+    public Transform Target;
+    public void Update()
 	{
         //Get a handle on the Image's uvRect
         float globalangle = turret.localEulerAngles.y / 360 + tank.localEulerAngles.y / 360;
@@ -62,5 +63,19 @@ public class CompassGunner : MonoBehaviour
 			CompassDirectionText.text = headingAngle.ToString ();
 			break;
 		}
-	}
+        if (Target)
+        {
+            Vector3 temp = Target.position - tank.position;
+            temp.y = 0;
+
+            float targetAngle = Quaternion.LookRotation(temp).eulerAngles.y;
+            targetAngle = 5 * (Mathf.RoundToInt(targetAngle / 5.0f));
+
+            //Convert float to int for switch
+            int displaytargetangle;
+            displaytargetangle = Mathf.RoundToInt(targetAngle);
+            Debug.Log("Cannoneer target : " + displaytargetangle.ToString());
+            TargetDirectionText.text = displaytargetangle.ToString();
+        }
+    }
 }
