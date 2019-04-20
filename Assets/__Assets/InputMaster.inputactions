@@ -114,16 +114,6 @@
                     "processors": "",
                     "interactions": "",
                     "bindings": []
-                },
-                {
-                    "name": "LookAround",
-                    "id": "72821f9c-9352-49c2-af90-435ee33fcbb2",
-                    "expectedControlLayout": "Quaternion",
-                    "continuous": true,
-                    "passThrough": false,
-                    "processors": "",
-                    "interactions": "",
-                    "bindings": []
                 }
             ],
             "bindings": [
@@ -134,18 +124,6 @@
                     "processors": "",
                     "groups": "Pilot",
                     "action": "Click",
-                    "chainWithPrevious": false,
-                    "isComposite": false,
-                    "isPartOfComposite": false,
-                    "modifiers": ""
-                },
-                {
-                    "name": "",
-                    "path": "<ViveHMD>/deviceRotation",
-                    "interactions": "",
-                    "processors": "",
-                    "groups": "Pilot",
-                    "action": "LookAround",
                     "chainWithPrevious": false,
                     "isComposite": false,
                     "isPartOfComposite": false,

@@ -8,7 +8,6 @@ ScriptedImporter:
     11400008: ChiefControls/Click
     11400010: Artillery/RotateY
     11400012: Artillery/RotateX
-    11400014: ChiefControls/LookAround
   externalObjects: {}
   userData: 
   assetBundleName: 

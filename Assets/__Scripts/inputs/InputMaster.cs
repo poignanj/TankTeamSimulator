@@ -44,13 +44,6 @@ public class InputMaster : InputActionAssetReference
             m_ChiefControls_Click.performed += m_ChiefControlsClickActionPerformed.Invoke;
         if (m_ChiefControlsClickActionCancelled != null)
             m_ChiefControls_Click.cancelled += m_ChiefControlsClickActionCancelled.Invoke;
-        m_ChiefControls_LookAround = m_ChiefControls.GetAction("LookAround");
-        if (m_ChiefControlsLookAroundActionStarted != null)
-            m_ChiefControls_LookAround.started += m_ChiefControlsLookAroundActionStarted.Invoke;
-        if (m_ChiefControlsLookAroundActionPerformed != null)
-            m_ChiefControls_LookAround.performed += m_ChiefControlsLookAroundActionPerformed.Invoke;
-        if (m_ChiefControlsLookAroundActionCancelled != null)
-            m_ChiefControls_LookAround.cancelled += m_ChiefControlsLookAroundActionCancelled.Invoke;
         // Artillery
         m_Artillery = asset.GetActionMap("Artillery");
         m_Artillery_RotateY = m_Artillery.GetAction("RotateY");
@@ -102,13 +95,6 @@ public class InputMaster : InputActionAssetReference
             m_ChiefControls_Click.performed -= m_ChiefControlsClickActionPerformed.Invoke;
         if (m_ChiefControlsClickActionCancelled != null)
             m_ChiefControls_Click.cancelled -= m_ChiefControlsClickActionCancelled.Invoke;
-        m_ChiefControls_LookAround = null;
-        if (m_ChiefControlsLookAroundActionStarted != null)
-            m_ChiefControls_LookAround.started -= m_ChiefControlsLookAroundActionStarted.Invoke;
-        if (m_ChiefControlsLookAroundActionPerformed != null)
-            m_ChiefControls_LookAround.performed -= m_ChiefControlsLookAroundActionPerformed.Invoke;
-        if (m_ChiefControlsLookAroundActionCancelled != null)
-            m_ChiefControls_LookAround.cancelled -= m_ChiefControlsLookAroundActionCancelled.Invoke;
         if (m_ArtilleryActionsCallbackInterface != null)
         {
             Artillery.SetCallbacks(null);
@@ -213,10 +199,6 @@ public class InputMaster : InputActionAssetReference
     [SerializeField] private ActionEvent m_ChiefControlsClickActionStarted;
     [SerializeField] private ActionEvent m_ChiefControlsClickActionPerformed;
     [SerializeField] private ActionEvent m_ChiefControlsClickActionCancelled;
-    private InputAction m_ChiefControls_LookAround;
-    [SerializeField] private ActionEvent m_ChiefControlsLookAroundActionStarted;
-    [SerializeField] private ActionEvent m_ChiefControlsLookAroundActionPerformed;
-    [SerializeField] private ActionEvent m_ChiefControlsLookAroundActionCancelled;
     public struct ChiefControlsActions
     {
         private InputMaster m_Wrapper;
@@ -225,10 +207,6 @@ public class InputMaster : InputActionAssetReference
         public ActionEvent ClickStarted { get { return m_Wrapper.m_ChiefControlsClickActionStarted; } }
         public ActionEvent ClickPerformed { get { return m_Wrapper.m_ChiefControlsClickActionPerformed; } }
         public ActionEvent ClickCancelled { get { return m_Wrapper.m_ChiefControlsClickActionCancelled; } }
-        public InputAction @LookAround { get { return m_Wrapper.m_ChiefControls_LookAround; } }
-        public ActionEvent LookAroundStarted { get { return m_Wrapper.m_ChiefControlsLookAroundActionStarted; } }
-        public ActionEvent LookAroundPerformed { get { return m_Wrapper.m_ChiefControlsLookAroundActionPerformed; } }
-        public ActionEvent LookAroundCancelled { get { return m_Wrapper.m_ChiefControlsLookAroundActionCancelled; } }
         public InputActionMap Get() { return m_Wrapper.m_ChiefControls; }
         public void Enable() { Get().Enable(); }
         public void Disable() { Get().Disable(); }
@@ -242,9 +220,6 @@ public class InputMaster : InputActionAssetReference
                 Click.started -= m_Wrapper.m_ChiefControlsActionsCallbackInterface.OnClick;
                 Click.performed -= m_Wrapper.m_ChiefControlsActionsCallbackInterface.OnClick;
                 Click.cancelled -= m_Wrapper.m_ChiefControlsActionsCallbackInterface.OnClick;
-                LookAround.started -= m_Wrapper.m_ChiefControlsActionsCallbackInterface.OnLookAround;
-                LookAround.performed -= m_Wrapper.m_ChiefControlsActionsCallbackInterface.OnLookAround;
-                LookAround.cancelled -= m_Wrapper.m_ChiefControlsActionsCallbackInterface.OnLookAround;
             }
             m_Wrapper.m_ChiefControlsActionsCallbackInterface = instance;
             if (instance != null)
@@ -252,9 +227,6 @@ public class InputMaster : InputActionAssetReference
                 Click.started += instance.OnClick;
                 Click.performed += instance.OnClick;
                 Click.cancelled += instance.OnClick;
-                LookAround.started += instance.OnLookAround;
-                LookAround.performed += instance.OnLookAround;
-                LookAround.cancelled += instance.OnLookAround;
             }
         }
     }
@@ -349,7 +321,6 @@ public interface IPilotTankActions
 public interface IChiefControlsActions
 {
     void OnClick(InputAction.CallbackContext context);
-    void OnLookAround(InputAction.CallbackContext context);
 }
 public interface IArtilleryActions
 {
