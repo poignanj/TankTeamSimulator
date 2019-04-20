@@ -9,6 +9,9 @@ public class CompassPilot : MonoBehaviour
     public Transform Player;
     public Text CompassDirectionText;
 
+    public Text TargetDirectionText;
+    public Transform Target;
+
     public void Update()
     {
         //Get a handle on the Image's uvRect
@@ -61,6 +64,21 @@ public class CompassPilot : MonoBehaviour
             default:
                 CompassDirectionText.text = headingAngle.ToString();
                 break;
+        }
+
+        if (Target)
+        {
+            Vector3 temp = Target.position - Player.position;
+            temp.y = 0;
+
+            float targetAngle = Quaternion.LookRotation(temp).eulerAngles.y;
+            targetAngle = 5 * (Mathf.RoundToInt(targetAngle / 5.0f));
+
+            //Convert float to int for switch
+            int displaytargetangle;
+            displaytargetangle = Mathf.RoundToInt(targetAngle);
+            Debug.Log("Pilot target : " + displaytargetangle.ToString());
+            TargetDirectionText.text = displaytargetangle.ToString();
         }
     }
 }

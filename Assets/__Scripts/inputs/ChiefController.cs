@@ -9,6 +9,10 @@ public class ChiefController : MonoBehaviour, IChiefControlsActions
     [Space][SerializeField] private Transform Left, Right;
     [Space][SerializeField] private GameObject Spawn_GO_R, Spawn_GO_G;
     private GameObject FlagRed, FlagGreen; //Aff0
+
+    [SerializeField] private GameObject gunner;
+    [SerializeField] private GameObject pilot;
+
     private void Awake()
     {
         inputMaster.ChiefControls.SetCallbacks(this);
@@ -34,7 +38,7 @@ public class ChiefController : MonoBehaviour, IChiefControlsActions
             if(!FlagGreen)
                 FlagGreen = Instantiate(Spawn_GO_G);
             FlagGreen.transform.position = hit.point;
-            //send 
+            FlagGreen.GetComponent<SetTarget>().SetMark(gunner);
         }
 
 
@@ -51,6 +55,7 @@ public class ChiefController : MonoBehaviour, IChiefControlsActions
             if (!FlagRed)
                 FlagRed = Instantiate(Spawn_GO_R);
             FlagRed.transform.position = hit.point;
+            FlagRed.GetComponent<SetTarget>().SetMark(pilot);
             //send 
         }
     }
