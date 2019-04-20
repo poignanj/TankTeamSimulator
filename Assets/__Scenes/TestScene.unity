@@ -836,9 +836,13 @@ PrefabInstance:
       propertyPath: m_Name
       value: WPN_cal_22
       objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: 7b91024a5fc62e640b979649dcfac39a, type: 3}
+      propertyPath: m_TagString
+      value: Cannon
+      objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 7b91024a5fc62e640b979649dcfac39a, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -103.79
+      value: -101.98
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 7b91024a5fc62e640b979649dcfac39a, type: 3}
       propertyPath: m_LocalPosition.y
@@ -1723,6 +1727,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: pz4_II
       objectReference: {fileID: 0}
+    - target: {fileID: 179096, guid: 9aaaa27f94cbb0a40a99a85193cf5141, type: 3}
+      propertyPath: m_TagString
+      value: Tank
+      objectReference: {fileID: 0}
     - target: {fileID: 448930, guid: 9aaaa27f94cbb0a40a99a85193cf5141, type: 3}
       propertyPath: m_LocalRotation.x
       value: 0
@@ -2426,6 +2434,18 @@ GameObject:
     type: 3}
   m_PrefabInstance: {fileID: 1617424115}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &1850067203
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1850067202}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 31637f08378c97548b01d233fd904753, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!4 &1850067206 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 421688, guid: 9aaaa27f94cbb0a40a99a85193cf5141,

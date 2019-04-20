@@ -54,6 +54,16 @@
                     "processors": "",
                     "interactions": "Press(behavior=2)",
                     "bindings": []
+                },
+                {
+                    "name": "repair",
+                    "id": "47280be0-8990-484b-a334-91223b58b5fe",
+                    "expectedControlLayout": "",
+                    "continuous": false,
+                    "passThrough": false,
+                    "processors": "",
+                    "interactions": "Press(behavior=2)",
+                    "bindings": []
                 }
             ],
             "bindings": [
@@ -119,7 +129,7 @@
                 },
                 {
                     "name": "Positive",
-                    "path": "<Keyboard>/z",
+                    "path": "<Keyboard>/w",
                     "interactions": "Hold",
                     "processors": "",
                     "groups": "Pilot",
@@ -160,6 +170,18 @@
                     "processors": "",
                     "groups": ";Pilot",
                     "action": "Stop All",
+                    "chainWithPrevious": false,
+                    "isComposite": false,
+                    "isPartOfComposite": false,
+                    "modifiers": ""
+                },
+                {
+                    "name": "",
+                    "path": "<Keyboard>/r",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": ";Pilot",
+                    "action": "repair",
                     "chainWithPrevious": false,
                     "isComposite": false,
                     "isPartOfComposite": false,

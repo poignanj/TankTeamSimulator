@@ -13,6 +13,7 @@ ScriptedImporter:
     11400016: Artillery/Reload
     11400018: PilotTank/Stop Left
     11400020: PilotTank/Stop Right
+    11400022: PilotTank/repair
     11400024: PilotTank/Stop All
   externalObjects: {}
   userData: 
