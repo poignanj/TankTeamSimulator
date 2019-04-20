@@ -27,14 +27,17 @@ using UnityEngine;
             // Go through all the colliders...
             for (int i = 0; i < colliders.Length; i++)
             {
-            Debug.Log("JAI COLLIDE");
+            Debug.Log("JAI COLLIDE "+colliders[i].name);
             // ... and find their rigidbody.
             Rigidbody targetRigidbody = colliders[i].GetComponent<Rigidbody> ();
-
+            Rigidbody parentTry = colliders[i].GetComponentInParent<Rigidbody>();
+            if (parentTry)
+                Debug.Log("je trouve " + parentTry.name);
+            //Debug.Log("je trouve " + parentTry.name);
                 // If they don't have a rigidbody, go on to the next collider.
                 if (!targetRigidbody)
                     continue;
-            Debug.Log("JAI TOUCHEY");
+            Debug.Log("JAI TOUCHEY "+targetRigidbody.name);
                 // Add an explosion force.
                 targetRigidbody.AddExplosionForce (m_ExplosionForce, transform.position, m_ExplosionRadius);
 

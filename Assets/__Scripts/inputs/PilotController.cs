@@ -14,7 +14,8 @@ public class PilotController : MonoBehaviour, IPilotTankActions
 
     [SerializeField] private InputMaster inputMaster;
     [SerializeField] public Transform leftTrack, rightTrack;
-    [Space][SerializeField] private float leftSpeed = 0, rightSpeed = 0;
+    [Space] [SerializeField] private float leftSpeed = 0, rightSpeed = 0, leftfloatspeed = 0, rightfloatspeed = 0;
+    private bool onHold = false;
     private Rigidbody engine;
     private void Awake()
     {
@@ -41,7 +42,7 @@ public class PilotController : MonoBehaviour, IPilotTankActions
         //todo: Adjust speed scaling (percentile?)
         engine.velocity.Set(0, 0, 0);
         engine.AddForceAtPosition(this.transform.forward.normalized * leftSpeed, leftTrack.position);
-        engine.AddForceAtPosition(this.transform.forward.normalized * rightSpeed, rightTrack.position);            EngineAudio ();
+        engine.AddForceAtPosition(this.transform.forward.normalized * rightSpeed, rightTrack.position);
         EngineAudio();
     }
 
@@ -57,6 +58,52 @@ public class PilotController : MonoBehaviour, IPilotTankActions
         rightSpeed += direction;
     }
 
+    public void OnStopAll(InputAction.CallbackContext context)
+    {
+        if (!onHold)
+        {
+            Debug.Log("put on hold");
+            rightfloatspeed = rightSpeed;
+            leftfloatspeed = leftSpeed;
+            rightSpeed = 0;
+            leftSpeed = 0;
+            onHold = true;
+        }
+        else
+        {
+            Debug.Log("release hold");
+            rightSpeed = rightfloatspeed;
+            leftSpeed = leftfloatspeed;
+            onHold = false;
+        }
+        
+        
+    }
+
+    public void OnStopLeft(InputAction.CallbackContext context)
+    {
+        leftSpeed = 0;
+        if (rightSpeed > 50)
+        {
+            rightSpeed = 50;
+        }else if (rightSpeed < -50)
+        {
+            rightSpeed = -50;
+        }
+    }
+    public void OnStopRight(InputAction.CallbackContext context)
+    {
+        
+        rightSpeed = 0;
+        if (leftSpeed > 50)
+        {
+            leftSpeed = 50;
+        }
+        else if (leftSpeed < -50)
+        {
+            leftSpeed = -50;
+        }
+    }
 
     private void EngineAudio()
     {
