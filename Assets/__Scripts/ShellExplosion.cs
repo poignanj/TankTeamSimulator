@@ -44,21 +44,29 @@ using UnityEngine;
             Debug.Log("le tag tank fonctionne");
             PilotController scriptpilote = parentTry.GetComponent<PilotController>();
             //si y'a pas de script pilote on passe au collider suivant
-            if (!scriptpilote)
-                continue;
-
-            if (colliders[i].name.Contains("L_"))
+            if (scriptpilote)
             {
-                if (Random.Range(0, 10) == 0)
-                    scriptpilote.DisableLeft();
-            }
-            if (colliders[i].name.Contains("R_"))
-            {
-                if (Random.Range(0, 10) == 0)
+                if (colliders[i].name.Contains("L_"))
                 {
-                    scriptpilote.DisableRight();
+                    if (Random.Range(0, 10) == 0)
+                        scriptpilote.DisableLeft();
+                }
+                if (colliders[i].name.Contains("R_"))
+                {
+                    if (Random.Range(0, 10) == 0)
+                    {
+                        scriptpilote.DisableRight();
+                    }
                 }
             }
+
+            TankHealth targethealth = parentTry.GetComponent<TankHealth>();
+            if (!targethealth)
+                continue;
+
+            targethealth.TakeDamage(5);
+
+            
             /*    if (!targetRigidbody)
                     continue;
             Debug.Log("JAI TOUCHEY "+targetRigidbody.name);*/
