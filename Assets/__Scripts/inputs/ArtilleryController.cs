@@ -10,7 +10,7 @@ public class ArtilleryController : MonoBehaviour, IArtilleryActions
     public AudioClip m_FireClip;
     public AudioClip m_ReloadClip;
     public Transform m_FireTransform;
-    public Rigidbody m_Shell;
+    public GameObject m_Shell;
     public float firepower = 30;
 
     [SerializeField] private InputMaster inputMaster;
@@ -74,8 +74,8 @@ public class ArtilleryController : MonoBehaviour, IArtilleryActions
     private void Fire()
     {
         readyToFire = false;
-        Rigidbody shellInstance = Instantiate(m_Shell, m_FireTransform.position, m_FireTransform.rotation) as Rigidbody;
-
+        GameObject o = Instantiate(m_Shell, m_FireTransform.position, m_FireTransform.rotation);
+        Rigidbody shellInstance = o.GetComponent<Rigidbody>();
         shellInstance.velocity = m_FireTransform.up*firepower*-1;
         m_shootingAudio.clip = m_FireClip;
         m_shootingAudio.Play();
