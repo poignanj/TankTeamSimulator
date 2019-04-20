@@ -25,10 +25,6 @@ public class ChiefController : MonoBehaviour, IChiefControlsActions
     {
         //Todo: Send message (distance & direction) to Artillery
     }
-
-    public void OnLookAround(InputAction.CallbackContext context)
-    {
-        throw new System.NotImplementedException();
-    }
+    
     
 }
