@@ -39,7 +39,7 @@ public class PilotController : MonoBehaviour, IPilotTankActions
     }
     private void Update()
     {
-        //todo: Adjust speed scaling (percentile?)
+        //todo: Adjust speed scaling (percentile?) & Force position
         engine.velocity.Set(0, 0, 0);
         engine.AddForceAtPosition(this.transform.forward.normalized * leftSpeed, leftTrack.position);
         engine.AddForceAtPosition(this.transform.forward.normalized * rightSpeed, rightTrack.position);

@@ -339,7 +339,50 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!43 &235351790
+--- !u!1 &534669902
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 534669905}
+  - component: {fileID: 534669904}
+  m_Layer: 0
+  m_Name: Main Camera
+  m_TagString: MainCamera
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &534669904
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 534669902}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 576bd706ea68f354d982c2eecdef547f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!4 &534669905
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 534669902}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 1, z: -10}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!43 &586279841
 Mesh:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -499,58 +542,24 @@ Mesh:
     offset: 0
     size: 0
     path: 
---- !u!1 &534669902
+--- !u!1 &657730111 stripped
 GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
+  m_CorrespondingSourceObject: {fileID: 1196534377, guid: 9aaaa27f94cbb0a40a99a85193cf5141,
+    type: 3}
+  m_PrefabInstance: {fileID: 1617424115}
   m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 534669905}
-  - component: {fileID: 534669903}
-  - component: {fileID: 534669904}
-  m_Layer: 0
-  m_Name: Main Camera
-  m_TagString: MainCamera
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!81 &534669903
-AudioListener:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 534669902}
-  m_Enabled: 1
---- !u!114 &534669904
+--- !u!114 &657730112
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 534669902}
+  m_GameObject: {fileID: 657730111}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 576bd706ea68f354d982c2eecdef547f, type: 3}
+  m_Script: {fileID: 11500000, guid: ca110e34f0262f943bc377b3565400c7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!4 &534669905
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 534669902}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 1, z: -10}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
-  m_Father: {fileID: 0}
-  m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &788419556
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -728,40 +737,18 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 14
   m_CollisionDetection: 0
---- !u!21 &1132102630
-Material:
-  serializedVersion: 6
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
+--- !u!4 &1196737555 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 1196737555, guid: 9aaaa27f94cbb0a40a99a85193cf5141,
+    type: 3}
+  m_PrefabInstance: {fileID: 1617424115}
   m_PrefabAsset: {fileID: 0}
-  m_Name: Sprites/Default
-  m_Shader: {fileID: 10753, guid: 0000000000000000f000000000000000, type: 0}
-  m_ShaderKeywords: 
-  m_LightmapFlags: 4
-  m_EnableInstancingVariants: 0
-  m_DoubleSidedGI: 0
-  m_CustomRenderQueue: -1
-  stringTagMap: {}
-  disabledShaderPasses: []
-  m_SavedProperties:
-    serializedVersion: 3
-    m_TexEnvs:
-    - _AlphaTex:
-        m_Texture: {fileID: 0}
-        m_Scale: {x: 1, y: 1}
-        m_Offset: {x: 0, y: 0}
-    - _MainTex:
-        m_Texture: {fileID: 0}
-        m_Scale: {x: 1, y: 1}
-        m_Offset: {x: 0, y: 0}
-    m_Floats:
-    - PixelSnap: 0
-    - _EnableExternalAlpha: 0
-    m_Colors:
-    - _Color: {r: 1, g: 1, b: 1, a: 1}
-    - _Flip: {r: 1, g: 1, b: 1, a: 1}
-    - _RendererColor: {r: 1, g: 1, b: 1, a: 1}
+--- !u!4 &1196810447 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 1196810447, guid: 9aaaa27f94cbb0a40a99a85193cf5141,
+    type: 3}
+  m_PrefabInstance: {fileID: 1617424115}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1383312973 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 100000, guid: 7b91024a5fc62e640b979649dcfac39a,
@@ -880,16 +867,72 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 6323699799986741429, guid: 9aaaa27f94cbb0a40a99a85193cf5141,
+        type: 3}
+      propertyPath: m_TargetDisplay
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 1760503699, guid: 9aaaa27f94cbb0a40a99a85193cf5141, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1760503702, guid: 9aaaa27f94cbb0a40a99a85193cf5141, type: 3}
+      propertyPath: m_TargetDisplay
+      value: 2
+      objectReference: {fileID: 0}
     - target: {fileID: 1198527423, guid: 9aaaa27f94cbb0a40a99a85193cf5141, type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
-      objectReference: {fileID: 1132102630}
+      objectReference: {fileID: 1645266331}
     - target: {fileID: 1197494843, guid: 9aaaa27f94cbb0a40a99a85193cf5141, type: 3}
       propertyPath: m_Mesh
       value: 
-      objectReference: {fileID: 235351790}
-    m_RemovedComponents: []
+      objectReference: {fileID: 586279841}
+    - target: {fileID: 309078356, guid: 9aaaa27f94cbb0a40a99a85193cf5141, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 309078359, guid: 9aaaa27f94cbb0a40a99a85193cf5141, type: 3}
+      propertyPath: m_TargetDisplay
+      value: 1
+      objectReference: {fileID: 0}
+    m_RemovedComponents:
+    - {fileID: 1530109097, guid: 9aaaa27f94cbb0a40a99a85193cf5141, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: 9aaaa27f94cbb0a40a99a85193cf5141, type: 3}
+--- !u!21 &1645266331
+Material:
+  serializedVersion: 6
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: Sprites/Default
+  m_Shader: {fileID: 10753, guid: 0000000000000000f000000000000000, type: 0}
+  m_ShaderKeywords: 
+  m_LightmapFlags: 4
+  m_EnableInstancingVariants: 0
+  m_DoubleSidedGI: 0
+  m_CustomRenderQueue: -1
+  stringTagMap: {}
+  disabledShaderPasses: []
+  m_SavedProperties:
+    serializedVersion: 3
+    m_TexEnvs:
+    - _AlphaTex:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _MainTex:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    m_Floats:
+    - PixelSnap: 0
+    - _EnableExternalAlpha: 0
+    m_Colors:
+    - _Color: {r: 1, g: 1, b: 1, a: 1}
+    - _Flip: {r: 1, g: 1, b: 1, a: 1}
+    - _RendererColor: {r: 1, g: 1, b: 1, a: 1}
 --- !u!1 &1892750680 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 195792, guid: 89e78efe92dfe5a42837b392cdb0bf9e,
@@ -1067,3 +1110,194 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 89e78efe92dfe5a42837b392cdb0bf9e, type: 3}
+--- !u!1 &8767859308838901182 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 8767859308838901182, guid: 9aaaa27f94cbb0a40a99a85193cf5141,
+    type: 3}
+  m_PrefabInstance: {fileID: 1617424115}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &8767859308838901183
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8767859308838901182}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a80d9e44cc64aba44a28e20b189e300b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  inputMaster:
+    m_Asset: {fileID: 11400000, guid: 311b79feb6b4c9a4c8c5f6dcb31b175c, type: 3}
+    m_PilotTankMoveRightLeverActionStarted:
+      m_PersistentCalls:
+        m_Calls: []
+      m_TypeName: InputMaster+ActionEvent, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
+        PublicKeyToken=null
+    m_PilotTankMoveRightLeverActionPerformed:
+      m_PersistentCalls:
+        m_Calls: []
+      m_TypeName: InputMaster+ActionEvent, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
+        PublicKeyToken=null
+    m_PilotTankMoveRightLeverActionCancelled:
+      m_PersistentCalls:
+        m_Calls: []
+      m_TypeName: InputMaster+ActionEvent, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
+        PublicKeyToken=null
+    m_PilotTankMoveLeftLeverActionStarted:
+      m_PersistentCalls:
+        m_Calls: []
+      m_TypeName: InputMaster+ActionEvent, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
+        PublicKeyToken=null
+    m_PilotTankMoveLeftLeverActionPerformed:
+      m_PersistentCalls:
+        m_Calls: []
+      m_TypeName: InputMaster+ActionEvent, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
+        PublicKeyToken=null
+    m_PilotTankMoveLeftLeverActionCancelled:
+      m_PersistentCalls:
+        m_Calls: []
+      m_TypeName: InputMaster+ActionEvent, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
+        PublicKeyToken=null
+    m_PilotTankStopLeftActionStarted:
+      m_PersistentCalls:
+        m_Calls: []
+      m_TypeName: InputMaster+ActionEvent, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
+        PublicKeyToken=null
+    m_PilotTankStopLeftActionPerformed:
+      m_PersistentCalls:
+        m_Calls: []
+      m_TypeName: InputMaster+ActionEvent, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
+        PublicKeyToken=null
+    m_PilotTankStopLeftActionCancelled:
+      m_PersistentCalls:
+        m_Calls: []
+      m_TypeName: InputMaster+ActionEvent, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
+        PublicKeyToken=null
+    m_PilotTankStopRightActionStarted:
+      m_PersistentCalls:
+        m_Calls: []
+      m_TypeName: InputMaster+ActionEvent, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
+        PublicKeyToken=null
+    m_PilotTankStopRightActionPerformed:
+      m_PersistentCalls:
+        m_Calls: []
+      m_TypeName: InputMaster+ActionEvent, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
+        PublicKeyToken=null
+    m_PilotTankStopRightActionCancelled:
+      m_PersistentCalls:
+        m_Calls: []
+      m_TypeName: InputMaster+ActionEvent, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
+        PublicKeyToken=null
+    m_PilotTankStopAllActionStarted:
+      m_PersistentCalls:
+        m_Calls: []
+      m_TypeName: InputMaster+ActionEvent, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
+        PublicKeyToken=null
+    m_PilotTankStopAllActionPerformed:
+      m_PersistentCalls:
+        m_Calls: []
+      m_TypeName: InputMaster+ActionEvent, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
+        PublicKeyToken=null
+    m_PilotTankStopAllActionCancelled:
+      m_PersistentCalls:
+        m_Calls: []
+      m_TypeName: InputMaster+ActionEvent, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
+        PublicKeyToken=null
+    m_ChiefControlsRClickActionStarted:
+      m_PersistentCalls:
+        m_Calls: []
+      m_TypeName: InputMaster+ActionEvent, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
+        PublicKeyToken=null
+    m_ChiefControlsRClickActionPerformed:
+      m_PersistentCalls:
+        m_Calls: []
+      m_TypeName: InputMaster+ActionEvent, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
+        PublicKeyToken=null
+    m_ChiefControlsRClickActionCancelled:
+      m_PersistentCalls:
+        m_Calls: []
+      m_TypeName: InputMaster+ActionEvent, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
+        PublicKeyToken=null
+    m_ChiefControlsLClickActionStarted:
+      m_PersistentCalls:
+        m_Calls: []
+      m_TypeName: InputMaster+ActionEvent, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
+        PublicKeyToken=null
+    m_ChiefControlsLClickActionPerformed:
+      m_PersistentCalls:
+        m_Calls: []
+      m_TypeName: InputMaster+ActionEvent, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
+        PublicKeyToken=null
+    m_ChiefControlsLClickActionCancelled:
+      m_PersistentCalls:
+        m_Calls: []
+      m_TypeName: InputMaster+ActionEvent, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
+        PublicKeyToken=null
+    m_ArtilleryRotateYActionStarted:
+      m_PersistentCalls:
+        m_Calls: []
+      m_TypeName: InputMaster+ActionEvent, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
+        PublicKeyToken=null
+    m_ArtilleryRotateYActionPerformed:
+      m_PersistentCalls:
+        m_Calls: []
+      m_TypeName: InputMaster+ActionEvent, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
+        PublicKeyToken=null
+    m_ArtilleryRotateYActionCancelled:
+      m_PersistentCalls:
+        m_Calls: []
+      m_TypeName: InputMaster+ActionEvent, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
+        PublicKeyToken=null
+    m_ArtilleryRotateXActionStarted:
+      m_PersistentCalls:
+        m_Calls: []
+      m_TypeName: InputMaster+ActionEvent, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
+        PublicKeyToken=null
+    m_ArtilleryRotateXActionPerformed:
+      m_PersistentCalls:
+        m_Calls: []
+      m_TypeName: InputMaster+ActionEvent, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
+        PublicKeyToken=null
+    m_ArtilleryRotateXActionCancelled:
+      m_PersistentCalls:
+        m_Calls: []
+      m_TypeName: InputMaster+ActionEvent, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
+        PublicKeyToken=null
+    m_ArtilleryFireActionStarted:
+      m_PersistentCalls:
+        m_Calls: []
+      m_TypeName: InputMaster+ActionEvent, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
+        PublicKeyToken=null
+    m_ArtilleryFireActionPerformed:
+      m_PersistentCalls:
+        m_Calls: []
+      m_TypeName: InputMaster+ActionEvent, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
+        PublicKeyToken=null
+    m_ArtilleryFireActionCancelled:
+      m_PersistentCalls:
+        m_Calls: []
+      m_TypeName: InputMaster+ActionEvent, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
+        PublicKeyToken=null
+    m_ArtilleryReloadActionStarted:
+      m_PersistentCalls:
+        m_Calls: []
+      m_TypeName: InputMaster+ActionEvent, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
+        PublicKeyToken=null
+    m_ArtilleryReloadActionPerformed:
+      m_PersistentCalls:
+        m_Calls: []
+      m_TypeName: InputMaster+ActionEvent, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
+        PublicKeyToken=null
+    m_ArtilleryReloadActionCancelled:
+      m_PersistentCalls:
+        m_Calls: []
+      m_TypeName: InputMaster+ActionEvent, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
+        PublicKeyToken=null
+  Left: {fileID: 1196737555}
+  Right: {fileID: 1196810447}
+  Spawn_GO_R: {fileID: 2916576386363330085, guid: 50edbff862487c548b637f1e20edd299,
+    type: 3}
+  Spawn_GO_G: {fileID: 2916576386363330085, guid: da1d4b2209d5b244394aa7b0576459d2,
+    type: 3}

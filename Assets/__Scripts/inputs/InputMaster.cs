@@ -58,13 +58,20 @@ public class InputMaster : InputActionAssetReference
             m_PilotTank_StopAll.cancelled += m_PilotTankStopAllActionCancelled.Invoke;
         // ChiefControls
         m_ChiefControls = asset.GetActionMap("ChiefControls");
-        m_ChiefControls_Click = m_ChiefControls.GetAction("Click");
-        if (m_ChiefControlsClickActionStarted != null)
-            m_ChiefControls_Click.started += m_ChiefControlsClickActionStarted.Invoke;
-        if (m_ChiefControlsClickActionPerformed != null)
-            m_ChiefControls_Click.performed += m_ChiefControlsClickActionPerformed.Invoke;
-        if (m_ChiefControlsClickActionCancelled != null)
-            m_ChiefControls_Click.cancelled += m_ChiefControlsClickActionCancelled.Invoke;
+        m_ChiefControls_RClick = m_ChiefControls.GetAction("RClick");
+        if (m_ChiefControlsRClickActionStarted != null)
+            m_ChiefControls_RClick.started += m_ChiefControlsRClickActionStarted.Invoke;
+        if (m_ChiefControlsRClickActionPerformed != null)
+            m_ChiefControls_RClick.performed += m_ChiefControlsRClickActionPerformed.Invoke;
+        if (m_ChiefControlsRClickActionCancelled != null)
+            m_ChiefControls_RClick.cancelled += m_ChiefControlsRClickActionCancelled.Invoke;
+        m_ChiefControls_LClick = m_ChiefControls.GetAction("LClick");
+        if (m_ChiefControlsLClickActionStarted != null)
+            m_ChiefControls_LClick.started += m_ChiefControlsLClickActionStarted.Invoke;
+        if (m_ChiefControlsLClickActionPerformed != null)
+            m_ChiefControls_LClick.performed += m_ChiefControlsLClickActionPerformed.Invoke;
+        if (m_ChiefControlsLClickActionCancelled != null)
+            m_ChiefControls_LClick.cancelled += m_ChiefControlsLClickActionCancelled.Invoke;
         // Artillery
         m_Artillery = asset.GetActionMap("Artillery");
         m_Artillery_RotateY = m_Artillery.GetAction("RotateY");
@@ -144,13 +151,20 @@ public class InputMaster : InputActionAssetReference
             ChiefControls.SetCallbacks(null);
         }
         m_ChiefControls = null;
-        m_ChiefControls_Click = null;
-        if (m_ChiefControlsClickActionStarted != null)
-            m_ChiefControls_Click.started -= m_ChiefControlsClickActionStarted.Invoke;
-        if (m_ChiefControlsClickActionPerformed != null)
-            m_ChiefControls_Click.performed -= m_ChiefControlsClickActionPerformed.Invoke;
-        if (m_ChiefControlsClickActionCancelled != null)
-            m_ChiefControls_Click.cancelled -= m_ChiefControlsClickActionCancelled.Invoke;
+        m_ChiefControls_RClick = null;
+        if (m_ChiefControlsRClickActionStarted != null)
+            m_ChiefControls_RClick.started -= m_ChiefControlsRClickActionStarted.Invoke;
+        if (m_ChiefControlsRClickActionPerformed != null)
+            m_ChiefControls_RClick.performed -= m_ChiefControlsRClickActionPerformed.Invoke;
+        if (m_ChiefControlsRClickActionCancelled != null)
+            m_ChiefControls_RClick.cancelled -= m_ChiefControlsRClickActionCancelled.Invoke;
+        m_ChiefControls_LClick = null;
+        if (m_ChiefControlsLClickActionStarted != null)
+            m_ChiefControls_LClick.started -= m_ChiefControlsLClickActionStarted.Invoke;
+        if (m_ChiefControlsLClickActionPerformed != null)
+            m_ChiefControls_LClick.performed -= m_ChiefControlsLClickActionPerformed.Invoke;
+        if (m_ChiefControlsLClickActionCancelled != null)
+            m_ChiefControls_LClick.cancelled -= m_ChiefControlsLClickActionCancelled.Invoke;
         if (m_ArtilleryActionsCallbackInterface != null)
         {
             Artillery.SetCallbacks(null);
@@ -307,18 +321,26 @@ public class InputMaster : InputActionAssetReference
     // ChiefControls
     private InputActionMap m_ChiefControls;
     private IChiefControlsActions m_ChiefControlsActionsCallbackInterface;
-    private InputAction m_ChiefControls_Click;
-    [SerializeField] private ActionEvent m_ChiefControlsClickActionStarted;
-    [SerializeField] private ActionEvent m_ChiefControlsClickActionPerformed;
-    [SerializeField] private ActionEvent m_ChiefControlsClickActionCancelled;
+    private InputAction m_ChiefControls_RClick;
+    [SerializeField] private ActionEvent m_ChiefControlsRClickActionStarted;
+    [SerializeField] private ActionEvent m_ChiefControlsRClickActionPerformed;
+    [SerializeField] private ActionEvent m_ChiefControlsRClickActionCancelled;
+    private InputAction m_ChiefControls_LClick;
+    [SerializeField] private ActionEvent m_ChiefControlsLClickActionStarted;
+    [SerializeField] private ActionEvent m_ChiefControlsLClickActionPerformed;
+    [SerializeField] private ActionEvent m_ChiefControlsLClickActionCancelled;
     public struct ChiefControlsActions
     {
         private InputMaster m_Wrapper;
         public ChiefControlsActions(InputMaster wrapper) { m_Wrapper = wrapper; }
-        public InputAction @Click { get { return m_Wrapper.m_ChiefControls_Click; } }
-        public ActionEvent ClickStarted { get { return m_Wrapper.m_ChiefControlsClickActionStarted; } }
-        public ActionEvent ClickPerformed { get { return m_Wrapper.m_ChiefControlsClickActionPerformed; } }
-        public ActionEvent ClickCancelled { get { return m_Wrapper.m_ChiefControlsClickActionCancelled; } }
+        public InputAction @RClick { get { return m_Wrapper.m_ChiefControls_RClick; } }
+        public ActionEvent RClickStarted { get { return m_Wrapper.m_ChiefControlsRClickActionStarted; } }
+        public ActionEvent RClickPerformed { get { return m_Wrapper.m_ChiefControlsRClickActionPerformed; } }
+        public ActionEvent RClickCancelled { get { return m_Wrapper.m_ChiefControlsRClickActionCancelled; } }
+        public InputAction @LClick { get { return m_Wrapper.m_ChiefControls_LClick; } }
+        public ActionEvent LClickStarted { get { return m_Wrapper.m_ChiefControlsLClickActionStarted; } }
+        public ActionEvent LClickPerformed { get { return m_Wrapper.m_ChiefControlsLClickActionPerformed; } }
+        public ActionEvent LClickCancelled { get { return m_Wrapper.m_ChiefControlsLClickActionCancelled; } }
         public InputActionMap Get() { return m_Wrapper.m_ChiefControls; }
         public void Enable() { Get().Enable(); }
         public void Disable() { Get().Disable(); }
@@ -329,16 +351,22 @@ public class InputMaster : InputActionAssetReference
         {
             if (m_Wrapper.m_ChiefControlsActionsCallbackInterface != null)
             {
-                Click.started -= m_Wrapper.m_ChiefControlsActionsCallbackInterface.OnClick;
-                Click.performed -= m_Wrapper.m_ChiefControlsActionsCallbackInterface.OnClick;
-                Click.cancelled -= m_Wrapper.m_ChiefControlsActionsCallbackInterface.OnClick;
+                RClick.started -= m_Wrapper.m_ChiefControlsActionsCallbackInterface.OnRClick;
+                RClick.performed -= m_Wrapper.m_ChiefControlsActionsCallbackInterface.OnRClick;
+                RClick.cancelled -= m_Wrapper.m_ChiefControlsActionsCallbackInterface.OnRClick;
+                LClick.started -= m_Wrapper.m_ChiefControlsActionsCallbackInterface.OnLClick;
+                LClick.performed -= m_Wrapper.m_ChiefControlsActionsCallbackInterface.OnLClick;
+                LClick.cancelled -= m_Wrapper.m_ChiefControlsActionsCallbackInterface.OnLClick;
             }
             m_Wrapper.m_ChiefControlsActionsCallbackInterface = instance;
             if (instance != null)
             {
-                Click.started += instance.OnClick;
-                Click.performed += instance.OnClick;
-                Click.cancelled += instance.OnClick;
+                RClick.started += instance.OnRClick;
+                RClick.performed += instance.OnRClick;
+                RClick.cancelled += instance.OnRClick;
+                LClick.started += instance.OnLClick;
+                LClick.performed += instance.OnLClick;
+                LClick.cancelled += instance.OnLClick;
             }
         }
     }
@@ -463,7 +491,8 @@ public interface IPilotTankActions
 }
 public interface IChiefControlsActions
 {
-    void OnClick(InputAction.CallbackContext context);
+    void OnRClick(InputAction.CallbackContext context);
+    void OnLClick(InputAction.CallbackContext context);
 }
 public interface IArtilleryActions
 {

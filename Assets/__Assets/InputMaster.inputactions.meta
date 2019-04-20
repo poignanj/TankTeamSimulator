@@ -6,12 +6,13 @@ ScriptedImporter:
     11400002: PilotTank/MoveRightLever
     11400004: PilotTank/MoveLeftLever
     11400006: Artillery/Fire
-    11400008: ChiefControls/Click
     11400010: Artillery/RotateY
     11400012: Artillery/RotateX
+    11400014: ChiefControls/RClick
     11400016: Artillery/Reload
     11400018: PilotTank/Stop Left
     11400020: PilotTank/Stop Right
+    11400022: ChiefControls/LClick
     11400024: PilotTank/Stop All
   externalObjects: {}
   userData: 

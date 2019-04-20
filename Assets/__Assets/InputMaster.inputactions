@@ -172,7 +172,17 @@
             "id": "58475ead-b288-4c34-828d-4649f4156a68",
             "actions": [
                 {
-                    "name": "Click",
+                    "name": "RClick",
+                    "id": "3920efb6-ac12-4aee-a24b-1a3de62e75da",
+                    "expectedControlLayout": "Button",
+                    "continuous": false,
+                    "passThrough": false,
+                    "processors": "",
+                    "interactions": "",
+                    "bindings": []
+                },
+                {
+                    "name": "LClick",
                     "id": "3920efb6-ac12-4aee-a24b-1a3de62e75da",
                     "expectedControlLayout": "Button",
                     "continuous": false,
@@ -189,7 +199,19 @@
                     "interactions": "Press",
                     "processors": "",
                     "groups": "Pilot",
-                    "action": "Click",
+                    "action": "RClick",
+                    "chainWithPrevious": false,
+                    "isComposite": false,
+                    "isPartOfComposite": false,
+                    "modifiers": ""
+                },
+                {
+                    "name": "",
+                    "path": "<ViveWand>{LeftHand}/triggerPressed",
+                    "interactions": "Press",
+                    "processors": "",
+                    "groups": "Pilot",
+                    "action": "LClick",
                     "chainWithPrevious": false,
                     "isComposite": false,
                     "isPartOfComposite": false,

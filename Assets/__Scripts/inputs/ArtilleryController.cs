@@ -41,7 +41,6 @@ public class ArtilleryController : MonoBehaviour, IArtilleryActions
     }
     public void OnRotateX(InputAction.CallbackContext context)
     {
-        //Todo: Rotate turret (left&right)
         var direction = context.ReadValue<Vector2>();
         //Warning: Calculate rotation first (stick from gamepad)
         turnIncrement = direction[0];
@@ -49,7 +48,6 @@ public class ArtilleryController : MonoBehaviour, IArtilleryActions
 
     public void OnRotateY(InputAction.CallbackContext context)
     {
-        //Todo: Rotate canon (up&down)
         var direction = context.ReadValue<Vector2>();
         //Warning: Calculate rotation first (stick from gamepad)
         aimIncrement = direction[1];
