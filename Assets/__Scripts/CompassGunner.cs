@@ -10,8 +10,8 @@ public class CompassGunner : MonoBehaviour
 	public void Update()
 	{
         //Get a handle on the Image's uvRect
-        float couille = turret.localEulerAngles.y / 360 + tank.localEulerAngles.y / 360;
-        CompassImage.uvRect = new Rect(couille, 0, 1, 1);
+        float globalangle = turret.localEulerAngles.y / 360 + tank.localEulerAngles.y / 360;
+        CompassImage.uvRect = new Rect(globalangle, 0, 1, 1);
         
 
         // Get a copy of your forward vector

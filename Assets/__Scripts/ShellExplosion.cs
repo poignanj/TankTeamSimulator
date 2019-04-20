@@ -31,17 +31,42 @@ using UnityEngine;
             // ... and find their rigidbody.
             Rigidbody targetRigidbody = colliders[i].GetComponent<Rigidbody> ();
             Rigidbody parentTry = colliders[i].GetComponentInParent<Rigidbody>();
-            if (parentTry)
-                Debug.Log("je trouve " + parentTry.name);
-            //Debug.Log("je trouve " + parentTry.name);
-                // If they don't have a rigidbody, go on to the next collider.
-                if (!targetRigidbody)
-                    continue;
-            Debug.Log("JAI TOUCHEY "+targetRigidbody.name);
-                // Add an explosion force.
-                targetRigidbody.AddExplosionForce (m_ExplosionForce, transform.position, m_ExplosionRadius);
 
-                //Todo: gerer la perte de hp ou quoi
+            // Si le parent de l'element a pas de rigidbody c'est pas un bout du tank, donc on passe au suivant.
+            if (!parentTry)
+                continue;
+
+            Debug.Log("je trouve " + parentTry.name+" from "+colliders[i].name);
+            //Si on trouve pas le tag tank, on a rien a faire donc on continue
+            if (parentTry.tag != "Tank")
+                continue;
+
+            Debug.Log("le tag tank fonctionne");
+            PilotController scriptpilote = parentTry.GetComponent<PilotController>();
+            //si y'a pas de script pilote on passe au collider suivant
+            if (!scriptpilote)
+                continue;
+
+            if (colliders[i].name.Contains("L_"))
+            {
+                if (Random.Range(0, 10) == 0)
+                    scriptpilote.DisableLeft();
+            }
+            if (colliders[i].name.Contains("R_"))
+            {
+                if (Random.Range(0, 10) == 0)
+                {
+                    scriptpilote.DisableRight();
+                }
+            }
+            /*    if (!targetRigidbody)
+                    continue;
+            Debug.Log("JAI TOUCHEY "+targetRigidbody.name);*/
+            // Add an explosion force.
+            //targetRigidbody.AddExplosionForce (m_ExplosionForce, transform.position, m_ExplosionRadius);
+
+            // If they don't have a rigidbody, go on to the next collider.// If they don't have a rigidbody, go on to the next collider.
+            //Todo: gerer la perte de hp ou quoi
             /*
                 // Find the TankHealth script associated with the rigidbody.
                 TankHealth targetHealth = targetRigidbody.GetComponent<TankHealth> ();
@@ -55,7 +80,7 @@ using UnityEngine;
 
                 // Deal this damage to the tank.
                 targetHealth.TakeDamage (damage);*/
-            }
+        }
 
             // Unparent the particles from the shell.
             m_ExplosionParticles.transform.parent = null;

@@ -15,7 +15,7 @@ public class PilotController : MonoBehaviour, IPilotTankActions
     [SerializeField] private InputMaster inputMaster;
     [SerializeField] public Transform leftTrack, rightTrack;
     [Space] [SerializeField] private float leftSpeed = 0, rightSpeed = 0, leftfloatspeed = 0, rightfloatspeed = 0;
-    private bool onHold = false;
+    private bool onHold = false, leftdisabled = false, rightdisabled =false;
     private Rigidbody engine;
     private void Awake()
     {
@@ -48,14 +48,20 @@ public class PilotController : MonoBehaviour, IPilotTankActions
 
     public void OnMoveLeftLever(InputAction.CallbackContext context)
     {
-        var direction = context.ReadValue<float>();
-        leftSpeed += direction;
+        if (!leftdisabled)
+        {
+            var direction = context.ReadValue<float>();
+            leftSpeed += direction;
+        }    
     }
 
     public void OnMoveRightLever(InputAction.CallbackContext context)
     {
-        var direction = context.ReadValue<float>();
-        rightSpeed += direction;
+        if (!rightdisabled)
+        {
+            var direction = context.ReadValue<float>();
+            rightSpeed += direction;
+        }
     }
 
     public void OnStopAll(InputAction.CallbackContext context)
@@ -94,6 +100,41 @@ public class PilotController : MonoBehaviour, IPilotTankActions
     public void OnStopRight(InputAction.CallbackContext context)
     {
         
+        rightSpeed = 0;
+        if (leftSpeed > 50)
+        {
+            leftSpeed = 50;
+        }
+        else if (leftSpeed < -50)
+        {
+            leftSpeed = -50;
+        }
+    }
+
+    public void OnRepair(InputAction.CallbackContext context)
+    {
+        rightdisabled = false;
+        leftdisabled = false;
+    }
+
+    public void DisableLeft()
+    {
+        Debug.Log("Left has been disabled");
+        leftdisabled = true;
+        leftSpeed = 0;
+        if (rightSpeed > 50)
+        {
+            rightSpeed = 50;
+        }
+        else if (rightSpeed < -50)
+        {
+            rightSpeed = -50;
+        }
+    }
+    public void DisableRight()
+    {
+        Debug.Log("Right has been disabled");
+        rightdisabled = true;
         rightSpeed = 0;
         if (leftSpeed > 50)
         {

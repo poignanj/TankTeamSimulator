@@ -56,6 +56,13 @@ public class InputMaster : InputActionAssetReference
             m_PilotTank_StopAll.performed += m_PilotTankStopAllActionPerformed.Invoke;
         if (m_PilotTankStopAllActionCancelled != null)
             m_PilotTank_StopAll.cancelled += m_PilotTankStopAllActionCancelled.Invoke;
+        m_PilotTank_repair = m_PilotTank.GetAction("repair");
+        if (m_PilotTankRepairActionStarted != null)
+            m_PilotTank_repair.started += m_PilotTankRepairActionStarted.Invoke;
+        if (m_PilotTankRepairActionPerformed != null)
+            m_PilotTank_repair.performed += m_PilotTankRepairActionPerformed.Invoke;
+        if (m_PilotTankRepairActionCancelled != null)
+            m_PilotTank_repair.cancelled += m_PilotTankRepairActionCancelled.Invoke;
         // ChiefControls
         m_ChiefControls = asset.GetActionMap("ChiefControls");
         m_ChiefControls_RClick = m_ChiefControls.GetAction("RClick");
@@ -146,6 +153,13 @@ public class InputMaster : InputActionAssetReference
             m_PilotTank_StopAll.performed -= m_PilotTankStopAllActionPerformed.Invoke;
         if (m_PilotTankStopAllActionCancelled != null)
             m_PilotTank_StopAll.cancelled -= m_PilotTankStopAllActionCancelled.Invoke;
+        m_PilotTank_repair = null;
+        if (m_PilotTankRepairActionStarted != null)
+            m_PilotTank_repair.started -= m_PilotTankRepairActionStarted.Invoke;
+        if (m_PilotTankRepairActionPerformed != null)
+            m_PilotTank_repair.performed -= m_PilotTankRepairActionPerformed.Invoke;
+        if (m_PilotTankRepairActionCancelled != null)
+            m_PilotTank_repair.cancelled -= m_PilotTankRepairActionCancelled.Invoke;
         if (m_ChiefControlsActionsCallbackInterface != null)
         {
             ChiefControls.SetCallbacks(null);
@@ -239,6 +253,10 @@ public class InputMaster : InputActionAssetReference
     [SerializeField] private ActionEvent m_PilotTankStopAllActionStarted;
     [SerializeField] private ActionEvent m_PilotTankStopAllActionPerformed;
     [SerializeField] private ActionEvent m_PilotTankStopAllActionCancelled;
+    private InputAction m_PilotTank_repair;
+    [SerializeField] private ActionEvent m_PilotTankRepairActionStarted;
+    [SerializeField] private ActionEvent m_PilotTankRepairActionPerformed;
+    [SerializeField] private ActionEvent m_PilotTankRepairActionCancelled;
     public struct PilotTankActions
     {
         private InputMaster m_Wrapper;
@@ -263,6 +281,10 @@ public class InputMaster : InputActionAssetReference
         public ActionEvent StopAllStarted { get { return m_Wrapper.m_PilotTankStopAllActionStarted; } }
         public ActionEvent StopAllPerformed { get { return m_Wrapper.m_PilotTankStopAllActionPerformed; } }
         public ActionEvent StopAllCancelled { get { return m_Wrapper.m_PilotTankStopAllActionCancelled; } }
+        public InputAction @repair { get { return m_Wrapper.m_PilotTank_repair; } }
+        public ActionEvent repairStarted { get { return m_Wrapper.m_PilotTankRepairActionStarted; } }
+        public ActionEvent repairPerformed { get { return m_Wrapper.m_PilotTankRepairActionPerformed; } }
+        public ActionEvent repairCancelled { get { return m_Wrapper.m_PilotTankRepairActionCancelled; } }
         public InputActionMap Get() { return m_Wrapper.m_PilotTank; }
         public void Enable() { Get().Enable(); }
         public void Disable() { Get().Disable(); }
@@ -288,6 +310,9 @@ public class InputMaster : InputActionAssetReference
                 StopAll.started -= m_Wrapper.m_PilotTankActionsCallbackInterface.OnStopAll;
                 StopAll.performed -= m_Wrapper.m_PilotTankActionsCallbackInterface.OnStopAll;
                 StopAll.cancelled -= m_Wrapper.m_PilotTankActionsCallbackInterface.OnStopAll;
+                repair.started -= m_Wrapper.m_PilotTankActionsCallbackInterface.OnRepair;
+                repair.performed -= m_Wrapper.m_PilotTankActionsCallbackInterface.OnRepair;
+                repair.cancelled -= m_Wrapper.m_PilotTankActionsCallbackInterface.OnRepair;
             }
             m_Wrapper.m_PilotTankActionsCallbackInterface = instance;
             if (instance != null)
@@ -307,6 +332,9 @@ public class InputMaster : InputActionAssetReference
                 StopAll.started += instance.OnStopAll;
                 StopAll.performed += instance.OnStopAll;
                 StopAll.cancelled += instance.OnStopAll;
+                repair.started += instance.OnRepair;
+                repair.performed += instance.OnRepair;
+                repair.cancelled += instance.OnRepair;
             }
         }
     }
@@ -488,6 +516,7 @@ public interface IPilotTankActions
     void OnStopLeft(InputAction.CallbackContext context);
     void OnStopRight(InputAction.CallbackContext context);
     void OnStopAll(InputAction.CallbackContext context);
+    void OnRepair(InputAction.CallbackContext context);
 }
 public interface IChiefControlsActions
 {
