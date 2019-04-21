@@ -16,6 +16,7 @@ public class PilotController : MonoBehaviour, IPilotTankActions
     [SerializeField] public Transform leftTrack, rightTrack;
     [Space] [SerializeField] private float leftSpeed = 0, rightSpeed = 0, leftfloatspeed = 0, rightfloatspeed = 0;
     private bool onHold = false, leftdisabled = false, rightdisabled =false;
+    private float maxSpeed = 300, minSpeed = -150;
     private Rigidbody engine;
     private void Awake()
     {
@@ -41,8 +42,13 @@ public class PilotController : MonoBehaviour, IPilotTankActions
     {
         //todo: Adjust speed scaling (percentile?) & Force position
         engine.velocity.Set(0, 0, 0);
-        engine.AddForceAtPosition(this.transform.forward.normalized * leftSpeed, leftTrack.position);
-        engine.AddForceAtPosition(this.transform.forward.normalized * rightSpeed, rightTrack.position);
+        engine.angularVelocity.Set(0, 0, 0);
+        Vector3 leftpos = leftTrack.position;
+        Vector3 rightpos = rightTrack.position;
+        //leftpos.y = engine.centerOfMass.y;
+        //rightpos.y = engine.centerOfMass.y;
+        engine.AddForceAtPosition(this.transform.forward.normalized * leftSpeed, leftpos);
+        engine.AddForceAtPosition(this.transform.forward.normalized * rightSpeed, rightpos);
         EngineAudio();
     }
 
@@ -52,7 +58,15 @@ public class PilotController : MonoBehaviour, IPilotTankActions
         {
             var direction = context.ReadValue<float>();
             leftSpeed += direction;
-        }    
+        }
+        if(leftSpeed < minSpeed)
+        {
+            leftSpeed = minSpeed;
+        }
+        if(leftSpeed > maxSpeed)
+        {
+            leftSpeed = maxSpeed;
+        }
     }
 
     public void OnMoveRightLever(InputAction.CallbackContext context)
@@ -62,10 +76,19 @@ public class PilotController : MonoBehaviour, IPilotTankActions
             var direction = context.ReadValue<float>();
             rightSpeed += direction;
         }
+        if (rightSpeed < minSpeed)
+        {
+            rightSpeed = minSpeed;
+        }
+        if (rightSpeed > maxSpeed)
+        {
+            rightSpeed = maxSpeed;
+        }
     }
 
     public void OnStopAll(InputAction.CallbackContext context)
     {
+        /*Méthode pour faire une arrêt temporaire
         if (!onHold)
         {
             Debug.Log("put on hold");
@@ -81,7 +104,9 @@ public class PilotController : MonoBehaviour, IPilotTankActions
             rightSpeed = rightfloatspeed;
             leftSpeed = leftfloatspeed;
             onHold = false;
-        }
+        }*/
+        rightSpeed = 0;
+        leftSpeed = 0;
         
         
     }
