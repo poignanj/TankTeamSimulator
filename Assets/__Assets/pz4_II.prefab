@@ -408,7 +408,6 @@ GameObject:
   - component: {fileID: 450216}
   - component: {fileID: 3372222}
   - component: {fileID: 2314818}
-  - component: {fileID: 1062685972}
   m_Layer: 0
   m_Name: turret_type2_base
   m_TagString: Untagged
@@ -475,20 +474,6 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
---- !u!64 &1062685972
-MeshCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 106878}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 3
-  m_Convex: 0
-  m_CookingOptions: 14
-  m_Mesh: {fileID: 4300020, guid: e55428b83c6176b47820498c49456bbf, type: 3}
 --- !u!1 &107298
 GameObject:
   m_ObjectHideFlags: 0
@@ -2750,13 +2735,13 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 156016}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalRotation: {x: 0, y: -0.7826082, z: 0, w: 0.62251467}
   m_LocalPosition: {x: -0.12927735, y: 0.56718063, z: 1.8744847}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 465432}
   m_RootOrder: 2
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: -103, z: 0}
 --- !u!33 &3300000
 MeshFilter:
   m_ObjectHideFlags: 0
@@ -4805,13 +4790,13 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 180366}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalRotation: {x: 0, y: 0.9063079, z: 0, w: 0.42261827}
   m_LocalPosition: {x: 0.18104355, y: 0.5671808, z: 1.8744844}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 465432}
   m_RootOrder: 1
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 130, z: 0}
 --- !u!33 &3313366
 MeshFilter:
   m_ObjectHideFlags: 0
@@ -7021,78 +7006,6 @@ MonoBehaviour:
     m_VerticalOverflow: 1
     m_LineSpacing: 1
   m_Text: 360
---- !u!114 &657730112
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1196534377}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ca110e34f0262f943bc377b3565400c7, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
---- !u!114 &657730113
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1196534377}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: b2f511c1adaa1e94ebe7ca97bbcabd17, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  pose: {fileID: 0}
-  interactWithUI:
-    actionPath: /actions/default/in/InteractUI
-    needsReinit: 0
-  active: 1
-  color: {r: 0, g: 0, b: 0, a: 0}
-  thickness: 0.002
-  clickColor: {r: 0, g: 1, b: 0, a: 1}
-  holder: {fileID: 0}
-  pointer: {fileID: 0}
-  addRigidBody: 0
-  reference: {fileID: 0}
---- !u!114 &6467578507819284326
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1196534377}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ca110e34f0262f943bc377b3565400c7, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
---- !u!114 &657730114
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1196564559}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: b2f511c1adaa1e94ebe7ca97bbcabd17, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  pose: {fileID: 0}
-  interactWithUI:
-    actionPath: /actions/default/in/InteractUI
-    needsReinit: 0
-  active: 1
-  color: {r: 0, g: 0, b: 0, a: 0}
-  thickness: 0.002
-  clickColor: {r: 1, g: 0, b: 0.051016808, a: 1}
-  holder: {fileID: 0}
-  pointer: {fileID: 0}
-  addRigidBody: 0
-  reference: {fileID: 0}
 --- !u!1 &1530109095
 GameObject:
   m_ObjectHideFlags: 0
@@ -7757,6 +7670,83 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &2162528392969240844
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 241111826752714120}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b2f511c1adaa1e94ebe7ca97bbcabd17, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  pose: {fileID: 0}
+  interactWithUI:
+    actionPath: /actions/default/in/InteractUI
+    needsReinit: 1
+  active: 1
+  color: {r: 0, g: 0, b: 0, a: 0}
+  thickness: 0.002
+  clickColor: {r: 1, g: 0.021577962, b: 0, a: 1}
+  holder: {fileID: 0}
+  pointer: {fileID: 0}
+  addRigidBody: 0
+  reference: {fileID: 0}
+--- !u!114 &5599126584569574440
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 241111826752749486}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b2f511c1adaa1e94ebe7ca97bbcabd17, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  pose: {fileID: 0}
+  interactWithUI:
+    actionPath: /actions/default/in/InteractUI
+    needsReinit: 1
+  active: 1
+  color: {r: 0, g: 0, b: 0, a: 0}
+  thickness: 0.002
+  clickColor: {r: 0, g: 1, b: 0, a: 1}
+  holder: {fileID: 0}
+  pointer: {fileID: 0}
+  addRigidBody: 0
+  reference: {fileID: 0}
+--- !u!54 &8755520
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 241809459735635234}
+  serializedVersion: 2
+  m_Mass: 0.0000001
+  m_Drag: 0
+  m_AngularDrag: 0
+  m_UseGravity: 0
+  m_IsKinematic: 0
+  m_Interpolate: 0
+  m_Constraints: 0
+  m_CollisionDetection: 0
+--- !u!135 &8755519
+SphereCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 241809459735635234}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Radius: 0.1
+  m_Center: {x: 0, y: 0, z: 0}
 --- !u!1 &956758454730931072
 GameObject:
   m_ObjectHideFlags: 0
@@ -7817,13 +7807,13 @@ Camera:
   field of view: 60
   orthographic: 0
   orthographic size: 5
-  m_Depth: -1
+  m_Depth: 0
   m_CullingMask:
     serializedVersion: 2
     m_Bits: 4294967295
   m_RenderingPath: 1
   m_TargetTexture: {fileID: 0}
-  m_TargetDisplay: 2
+  m_TargetDisplay: 0
   m_TargetEye: 0
   m_HDR: 1
   m_AllowMSAA: 1
@@ -7901,7 +7891,7 @@ Canvas:
   m_AdditionalShaderChannelsFlag: 0
   m_SortingLayerID: 0
   m_SortingOrder: 0
-  m_TargetDisplay: 2
+  m_TargetDisplay: 0
 --- !u!114 &8320365304455742169
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -8108,8 +8098,8 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 6841501743072946201}
-  - component: {fileID: 8767859308838901183}
-  - component: {fileID: 1212076402663853230}
+  - component: {fileID: 4877980850927314817}
+  - component: {fileID: 1674124894}
   m_Layer: 0
   m_Name: CameraTankCommander
   m_TagString: Untagged
@@ -8128,11 +8118,24 @@ Transform:
   m_LocalPosition: {x: 0.024, y: 0.624, z: 2.186}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
-  - {fileID: 1196796129}
+  - {fileID: 241111826752486694}
   m_Father: {fileID: 465432}
   m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 90, y: 0, z: 0}
---- !u!114 &8767859308838901183
+--- !u!65 &4877980850927314817
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8767859308838901182}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 1, y: 1, z: 1}
+  m_Center: {x: 0, y: -0.8, z: 0}
+--- !u!114 &1674124894
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -8141,402 +8144,18 @@ MonoBehaviour:
   m_GameObject: {fileID: 8767859308838901182}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: a80d9e44cc64aba44a28e20b189e300b, type: 3}
+  m_Script: {fileID: 11500000, guid: bc64fa4fa9b2ecb48acf596a33b8d721, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  inputMaster:
-    m_Asset: {fileID: 11400000, guid: 311b79feb6b4c9a4c8c5f6dcb31b175c, type: 3}
-    m_PilotTankMoveRightLeverActionStarted:
-      m_PersistentCalls:
-        m_Calls: []
-      m_TypeName: InputMaster+ActionEvent, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
-        PublicKeyToken=null
-    m_PilotTankMoveRightLeverActionPerformed:
-      m_PersistentCalls:
-        m_Calls: []
-      m_TypeName: InputMaster+ActionEvent, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
-        PublicKeyToken=null
-    m_PilotTankMoveRightLeverActionCancelled:
-      m_PersistentCalls:
-        m_Calls: []
-      m_TypeName: InputMaster+ActionEvent, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
-        PublicKeyToken=null
-    m_PilotTankMoveLeftLeverActionStarted:
-      m_PersistentCalls:
-        m_Calls: []
-      m_TypeName: InputMaster+ActionEvent, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
-        PublicKeyToken=null
-    m_PilotTankMoveLeftLeverActionPerformed:
-      m_PersistentCalls:
-        m_Calls: []
-      m_TypeName: InputMaster+ActionEvent, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
-        PublicKeyToken=null
-    m_PilotTankMoveLeftLeverActionCancelled:
-      m_PersistentCalls:
-        m_Calls: []
-      m_TypeName: InputMaster+ActionEvent, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
-        PublicKeyToken=null
-    m_PilotTankStopLeftActionStarted:
-      m_PersistentCalls:
-        m_Calls: []
-      m_TypeName: InputMaster+ActionEvent, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
-        PublicKeyToken=null
-    m_PilotTankStopLeftActionPerformed:
-      m_PersistentCalls:
-        m_Calls: []
-      m_TypeName: InputMaster+ActionEvent, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
-        PublicKeyToken=null
-    m_PilotTankStopLeftActionCancelled:
-      m_PersistentCalls:
-        m_Calls: []
-      m_TypeName: InputMaster+ActionEvent, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
-        PublicKeyToken=null
-    m_PilotTankStopRightActionStarted:
-      m_PersistentCalls:
-        m_Calls: []
-      m_TypeName: InputMaster+ActionEvent, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
-        PublicKeyToken=null
-    m_PilotTankStopRightActionPerformed:
-      m_PersistentCalls:
-        m_Calls: []
-      m_TypeName: InputMaster+ActionEvent, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
-        PublicKeyToken=null
-    m_PilotTankStopRightActionCancelled:
-      m_PersistentCalls:
-        m_Calls: []
-      m_TypeName: InputMaster+ActionEvent, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
-        PublicKeyToken=null
-    m_PilotTankStopAllActionStarted:
-      m_PersistentCalls:
-        m_Calls: []
-      m_TypeName: InputMaster+ActionEvent, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
-        PublicKeyToken=null
-    m_PilotTankStopAllActionPerformed:
-      m_PersistentCalls:
-        m_Calls: []
-      m_TypeName: InputMaster+ActionEvent, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
-        PublicKeyToken=null
-    m_PilotTankStopAllActionCancelled:
-      m_PersistentCalls:
-        m_Calls: []
-      m_TypeName: InputMaster+ActionEvent, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
-        PublicKeyToken=null
-    m_PilotTankRepairActionStarted:
-      m_PersistentCalls:
-        m_Calls: []
-      m_TypeName: InputMaster+ActionEvent, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
-        PublicKeyToken=null
-    m_PilotTankRepairActionPerformed:
-      m_PersistentCalls:
-        m_Calls: []
-      m_TypeName: InputMaster+ActionEvent, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
-        PublicKeyToken=null
-    m_PilotTankRepairActionCancelled:
-      m_PersistentCalls:
-        m_Calls: []
-      m_TypeName: InputMaster+ActionEvent, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
-        PublicKeyToken=null
-    m_ChiefControlsRClickActionStarted:
-      m_PersistentCalls:
-        m_Calls: []
-      m_TypeName: InputMaster+ActionEvent, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
-        PublicKeyToken=null
-    m_ChiefControlsRClickActionPerformed:
-      m_PersistentCalls:
-        m_Calls: []
-      m_TypeName: InputMaster+ActionEvent, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
-        PublicKeyToken=null
-    m_ChiefControlsRClickActionCancelled:
-      m_PersistentCalls:
-        m_Calls: []
-      m_TypeName: InputMaster+ActionEvent, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
-        PublicKeyToken=null
-    m_ChiefControlsLClickActionStarted:
-      m_PersistentCalls:
-        m_Calls: []
-      m_TypeName: InputMaster+ActionEvent, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
-        PublicKeyToken=null
-    m_ChiefControlsLClickActionPerformed:
-      m_PersistentCalls:
-        m_Calls: []
-      m_TypeName: InputMaster+ActionEvent, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
-        PublicKeyToken=null
-    m_ChiefControlsLClickActionCancelled:
-      m_PersistentCalls:
-        m_Calls: []
-      m_TypeName: InputMaster+ActionEvent, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
-        PublicKeyToken=null
-    m_ArtilleryRotateYActionStarted:
-      m_PersistentCalls:
-        m_Calls: []
-      m_TypeName: InputMaster+ActionEvent, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
-        PublicKeyToken=null
-    m_ArtilleryRotateYActionPerformed:
-      m_PersistentCalls:
-        m_Calls: []
-      m_TypeName: InputMaster+ActionEvent, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
-        PublicKeyToken=null
-    m_ArtilleryRotateYActionCancelled:
-      m_PersistentCalls:
-        m_Calls: []
-      m_TypeName: InputMaster+ActionEvent, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
-        PublicKeyToken=null
-    m_ArtilleryRotateXActionStarted:
-      m_PersistentCalls:
-        m_Calls: []
-      m_TypeName: InputMaster+ActionEvent, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
-        PublicKeyToken=null
-    m_ArtilleryRotateXActionPerformed:
-      m_PersistentCalls:
-        m_Calls: []
-      m_TypeName: InputMaster+ActionEvent, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
-        PublicKeyToken=null
-    m_ArtilleryRotateXActionCancelled:
-      m_PersistentCalls:
-        m_Calls: []
-      m_TypeName: InputMaster+ActionEvent, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
-        PublicKeyToken=null
-    m_ArtilleryFireActionStarted:
-      m_PersistentCalls:
-        m_Calls: []
-      m_TypeName: InputMaster+ActionEvent, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
-        PublicKeyToken=null
-    m_ArtilleryFireActionPerformed:
-      m_PersistentCalls:
-        m_Calls: []
-      m_TypeName: InputMaster+ActionEvent, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
-        PublicKeyToken=null
-    m_ArtilleryFireActionCancelled:
-      m_PersistentCalls:
-        m_Calls: []
-      m_TypeName: InputMaster+ActionEvent, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
-        PublicKeyToken=null
-    m_ArtilleryReloadActionStarted:
-      m_PersistentCalls:
-        m_Calls: []
-      m_TypeName: InputMaster+ActionEvent, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
-        PublicKeyToken=null
-    m_ArtilleryReloadActionPerformed:
-      m_PersistentCalls:
-        m_Calls: []
-      m_TypeName: InputMaster+ActionEvent, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
-        PublicKeyToken=null
-    m_ArtilleryReloadActionCancelled:
-      m_PersistentCalls:
-        m_Calls: []
-      m_TypeName: InputMaster+ActionEvent, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
-        PublicKeyToken=null
-  Left: {fileID: 1196737555}
-  Right: {fileID: 0}
+  Left: {fileID: 241111826752557524}
+  Right: {fileID: 241111826752501000}
   Spawn_GO_R: {fileID: 2916576386363330085, guid: 50edbff862487c548b637f1e20edd299,
     type: 3}
   Spawn_GO_G: {fileID: 2916576386363330085, guid: da1d4b2209d5b244394aa7b0576459d2,
     type: 3}
-  gunner: {fileID: 0}
-  pilot: {fileID: 0}
---- !u!114 &1212076402663853230
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8767859308838901182}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: a80d9e44cc64aba44a28e20b189e300b, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  inputMaster:
-    m_Asset: {fileID: 11400000, guid: 311b79feb6b4c9a4c8c5f6dcb31b175c, type: 3}
-    m_PilotTankMoveRightLeverActionStarted:
-      m_PersistentCalls:
-        m_Calls: []
-      m_TypeName: InputMaster+ActionEvent, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
-        PublicKeyToken=null
-    m_PilotTankMoveRightLeverActionPerformed:
-      m_PersistentCalls:
-        m_Calls: []
-      m_TypeName: InputMaster+ActionEvent, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
-        PublicKeyToken=null
-    m_PilotTankMoveRightLeverActionCancelled:
-      m_PersistentCalls:
-        m_Calls: []
-      m_TypeName: InputMaster+ActionEvent, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
-        PublicKeyToken=null
-    m_PilotTankMoveLeftLeverActionStarted:
-      m_PersistentCalls:
-        m_Calls: []
-      m_TypeName: InputMaster+ActionEvent, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
-        PublicKeyToken=null
-    m_PilotTankMoveLeftLeverActionPerformed:
-      m_PersistentCalls:
-        m_Calls: []
-      m_TypeName: InputMaster+ActionEvent, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
-        PublicKeyToken=null
-    m_PilotTankMoveLeftLeverActionCancelled:
-      m_PersistentCalls:
-        m_Calls: []
-      m_TypeName: InputMaster+ActionEvent, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
-        PublicKeyToken=null
-    m_PilotTankStopLeftActionStarted:
-      m_PersistentCalls:
-        m_Calls: []
-      m_TypeName: InputMaster+ActionEvent, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
-        PublicKeyToken=null
-    m_PilotTankStopLeftActionPerformed:
-      m_PersistentCalls:
-        m_Calls: []
-      m_TypeName: InputMaster+ActionEvent, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
-        PublicKeyToken=null
-    m_PilotTankStopLeftActionCancelled:
-      m_PersistentCalls:
-        m_Calls: []
-      m_TypeName: InputMaster+ActionEvent, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
-        PublicKeyToken=null
-    m_PilotTankStopRightActionStarted:
-      m_PersistentCalls:
-        m_Calls: []
-      m_TypeName: InputMaster+ActionEvent, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
-        PublicKeyToken=null
-    m_PilotTankStopRightActionPerformed:
-      m_PersistentCalls:
-        m_Calls: []
-      m_TypeName: InputMaster+ActionEvent, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
-        PublicKeyToken=null
-    m_PilotTankStopRightActionCancelled:
-      m_PersistentCalls:
-        m_Calls: []
-      m_TypeName: InputMaster+ActionEvent, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
-        PublicKeyToken=null
-    m_PilotTankStopAllActionStarted:
-      m_PersistentCalls:
-        m_Calls: []
-      m_TypeName: InputMaster+ActionEvent, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
-        PublicKeyToken=null
-    m_PilotTankStopAllActionPerformed:
-      m_PersistentCalls:
-        m_Calls: []
-      m_TypeName: InputMaster+ActionEvent, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
-        PublicKeyToken=null
-    m_PilotTankStopAllActionCancelled:
-      m_PersistentCalls:
-        m_Calls: []
-      m_TypeName: InputMaster+ActionEvent, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
-        PublicKeyToken=null
-    m_PilotTankRepairActionStarted:
-      m_PersistentCalls:
-        m_Calls: []
-      m_TypeName: InputMaster+ActionEvent, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
-        PublicKeyToken=null
-    m_PilotTankRepairActionPerformed:
-      m_PersistentCalls:
-        m_Calls: []
-      m_TypeName: InputMaster+ActionEvent, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
-        PublicKeyToken=null
-    m_PilotTankRepairActionCancelled:
-      m_PersistentCalls:
-        m_Calls: []
-      m_TypeName: InputMaster+ActionEvent, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
-        PublicKeyToken=null
-    m_ChiefControlsRClickActionStarted:
-      m_PersistentCalls:
-        m_Calls: []
-      m_TypeName: InputMaster+ActionEvent, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
-        PublicKeyToken=null
-    m_ChiefControlsRClickActionPerformed:
-      m_PersistentCalls:
-        m_Calls: []
-      m_TypeName: InputMaster+ActionEvent, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
-        PublicKeyToken=null
-    m_ChiefControlsRClickActionCancelled:
-      m_PersistentCalls:
-        m_Calls: []
-      m_TypeName: InputMaster+ActionEvent, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
-        PublicKeyToken=null
-    m_ChiefControlsLClickActionStarted:
-      m_PersistentCalls:
-        m_Calls: []
-      m_TypeName: InputMaster+ActionEvent, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
-        PublicKeyToken=null
-    m_ChiefControlsLClickActionPerformed:
-      m_PersistentCalls:
-        m_Calls: []
-      m_TypeName: InputMaster+ActionEvent, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
-        PublicKeyToken=null
-    m_ChiefControlsLClickActionCancelled:
-      m_PersistentCalls:
-        m_Calls: []
-      m_TypeName: InputMaster+ActionEvent, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
-        PublicKeyToken=null
-    m_ArtilleryRotateYActionStarted:
-      m_PersistentCalls:
-        m_Calls: []
-      m_TypeName: InputMaster+ActionEvent, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
-        PublicKeyToken=null
-    m_ArtilleryRotateYActionPerformed:
-      m_PersistentCalls:
-        m_Calls: []
-      m_TypeName: InputMaster+ActionEvent, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
-        PublicKeyToken=null
-    m_ArtilleryRotateYActionCancelled:
-      m_PersistentCalls:
-        m_Calls: []
-      m_TypeName: InputMaster+ActionEvent, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
-        PublicKeyToken=null
-    m_ArtilleryRotateXActionStarted:
-      m_PersistentCalls:
-        m_Calls: []
-      m_TypeName: InputMaster+ActionEvent, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
-        PublicKeyToken=null
-    m_ArtilleryRotateXActionPerformed:
-      m_PersistentCalls:
-        m_Calls: []
-      m_TypeName: InputMaster+ActionEvent, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
-        PublicKeyToken=null
-    m_ArtilleryRotateXActionCancelled:
-      m_PersistentCalls:
-        m_Calls: []
-      m_TypeName: InputMaster+ActionEvent, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
-        PublicKeyToken=null
-    m_ArtilleryFireActionStarted:
-      m_PersistentCalls:
-        m_Calls: []
-      m_TypeName: InputMaster+ActionEvent, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
-        PublicKeyToken=null
-    m_ArtilleryFireActionPerformed:
-      m_PersistentCalls:
-        m_Calls: []
-      m_TypeName: InputMaster+ActionEvent, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
-        PublicKeyToken=null
-    m_ArtilleryFireActionCancelled:
-      m_PersistentCalls:
-        m_Calls: []
-      m_TypeName: InputMaster+ActionEvent, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
-        PublicKeyToken=null
-    m_ArtilleryReloadActionStarted:
-      m_PersistentCalls:
-        m_Calls: []
-      m_TypeName: InputMaster+ActionEvent, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
-        PublicKeyToken=null
-    m_ArtilleryReloadActionPerformed:
-      m_PersistentCalls:
-        m_Calls: []
-      m_TypeName: InputMaster+ActionEvent, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
-        PublicKeyToken=null
-    m_ArtilleryReloadActionCancelled:
-      m_PersistentCalls:
-        m_Calls: []
-      m_TypeName: InputMaster+ActionEvent, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
-        PublicKeyToken=null
-  Left: {fileID: 1196737555}
-  Right: {fileID: 0}
-  Spawn_GO_R: {fileID: 2916576386363330085, guid: 50edbff862487c548b637f1e20edd299,
-    type: 3}
-  Spawn_GO_G: {fileID: 2916576386363330085, guid: da1d4b2209d5b244394aa7b0576459d2,
-    type: 3}
-  gunner: {fileID: 6841199058772631080}
-  pilot: {fileID: 6993108398599114752}
---- !u!1001 &1196672205
+  gunner: {fileID: 1620295399}
+  pilot: {fileID: 1928775734}
+--- !u!1001 &241111826752622858
 PrefabInstance:
   m_ObjectHideFlags: 0
   serializedVersion: 2
@@ -8659,29 +8278,50 @@ PrefabInstance:
       propertyPath: vertices.Array.data[7].z
       value: 0.9
       objectReference: {fileID: 0}
+    - target: {fileID: 1000014254142504, guid: 4d293c8e162f3874b982baadd71153d2, type: 3}
+      propertyPath: m_Name
+      value: CameraVR
+      objectReference: {fileID: 0}
+    - target: {fileID: 20000014031267948, guid: 4d293c8e162f3874b982baadd71153d2,
+        type: 3}
+      propertyPath: m_Depth
+      value: -1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 4d293c8e162f3874b982baadd71153d2, type: 3}
---- !u!4 &1196796129 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: 420908, guid: 4d293c8e162f3874b982baadd71153d2,
-    type: 3}
-  m_PrefabInstance: {fileID: 1196672205}
-  m_PrefabAsset: {fileID: 0}
---- !u!1 &1196564559 stripped
+--- !u!1 &241809459735635234 stripped
 GameObject:
-  m_CorrespondingSourceObject: {fileID: 124034, guid: 4d293c8e162f3874b982baadd71153d2,
+  m_CorrespondingSourceObject: {fileID: 1000014254142504, guid: 4d293c8e162f3874b982baadd71153d2,
     type: 3}
-  m_PrefabInstance: {fileID: 1196672205}
+  m_PrefabInstance: {fileID: 241111826752622858}
   m_PrefabAsset: {fileID: 0}
---- !u!4 &1196737555 stripped
+--- !u!4 &241111826752501000 stripped
 Transform:
-  m_CorrespondingSourceObject: {fileID: 458974, guid: 4d293c8e162f3874b982baadd71153d2,
+  m_CorrespondingSourceObject: {fileID: 402434, guid: 4d293c8e162f3874b982baadd71153d2,
     type: 3}
-  m_PrefabInstance: {fileID: 1196672205}
+  m_PrefabInstance: {fileID: 241111826752622858}
   m_PrefabAsset: {fileID: 0}
---- !u!1 &1196534377 stripped
+--- !u!1 &241111826752749486 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 159396, guid: 4d293c8e162f3874b982baadd71153d2,
     type: 3}
-  m_PrefabInstance: {fileID: 1196672205}
+  m_PrefabInstance: {fileID: 241111826752622858}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &241111826752714120 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 124034, guid: 4d293c8e162f3874b982baadd71153d2,
+    type: 3}
+  m_PrefabInstance: {fileID: 241111826752622858}
+  m_PrefabAsset: {fileID: 0}
+--- !u!4 &241111826752486694 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 420908, guid: 4d293c8e162f3874b982baadd71153d2,
+    type: 3}
+  m_PrefabInstance: {fileID: 241111826752622858}
+  m_PrefabAsset: {fileID: 0}
+--- !u!4 &241111826752557524 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 458974, guid: 4d293c8e162f3874b982baadd71153d2,
+    type: 3}
+  m_PrefabInstance: {fileID: 241111826752622858}
   m_PrefabAsset: {fileID: 0}

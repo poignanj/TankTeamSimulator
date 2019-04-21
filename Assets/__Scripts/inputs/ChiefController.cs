@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Experimental.Input;
+using Valve.VR;
 
 public class ChiefController : MonoBehaviour, IChiefControlsActions
 {
@@ -13,11 +14,6 @@ public class ChiefController : MonoBehaviour, IChiefControlsActions
     [SerializeField] private GameObject gunner;
     [SerializeField] private GameObject pilot;
 
-    private void Awake()
-    {
-        inputMaster.ChiefControls.SetCallbacks(this);
-    }
-
     private void OnEnable()
     {
         inputMaster.Enable();
@@ -26,11 +22,18 @@ public class ChiefController : MonoBehaviour, IChiefControlsActions
     {
         inputMaster.Disable();
     }
+    private void OnTriggerPressedOrReleased(SteamVR_Action_Boolean action_In)
+    {
+
+        Debug.Log("Trigger was pressed or released");
+    }
+
 
     public void OnRClick(InputAction.CallbackContext context)
     {
+        Debug.Log("Try Hit Right");
         //Todo: Send message (distance & direction) to Artillery
-        RaycastHit hit;
+        /*RaycastHit hit;
         if(Physics.Raycast(Right.position, Right.TransformDirection(Vector3.forward), out hit, Mathf.Infinity))
         {
             Debug.DrawRay(Right.position, Right.TransformDirection(Vector3.forward) * hit.distance, Color.yellow);
@@ -40,12 +43,13 @@ public class ChiefController : MonoBehaviour, IChiefControlsActions
             FlagGreen.transform.position = hit.point;
             FlagGreen.GetComponent<SetTarget>().SetMark(gunner);
         }
-
+        */
 
     }
 
     public void OnLClick(InputAction.CallbackContext context)
     {
+        /*
         //Todo: Send message (distance & direction) to Pilot
         RaycastHit hit;
         if (Physics.Raycast(Left.position, Left.TransformDirection(Vector3.forward), out hit, Mathf.Infinity))
@@ -57,6 +61,6 @@ public class ChiefController : MonoBehaviour, IChiefControlsActions
             FlagRed.transform.position = hit.point;
             FlagRed.GetComponent<SetTarget>().SetMark(pilot);
             //send 
-        }
+        }*/
     }
 }
