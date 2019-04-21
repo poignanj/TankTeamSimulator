@@ -21,14 +21,14 @@ using UnityEngine;
 
     private void OnTriggerEnter (Collider other)
         {
-        Debug.Log("JAI TRIGGER");
+        //Debug.Log("JAI TRIGGER");
         // Collect all the colliders in a sphere from the shell's current position to a radius of the explosion radius.
         Collider[] colliders = Physics.OverlapSphere (transform.position, m_ExplosionRadius, m_TankMask);
 
             // Go through all the colliders...
             for (int i = 0; i < colliders.Length; i++)
             {
-            Debug.Log("JAI COLLIDE "+colliders[i].name);
+            //Debug.Log("JAI COLLIDE "+colliders[i].name);
             // ... and find their rigidbody.
             Rigidbody targetRigidbody = colliders[i].GetComponent<Rigidbody> ();
             Rigidbody parentTry = colliders[i].GetComponentInParent<Rigidbody>();
@@ -37,12 +37,12 @@ using UnityEngine;
             if (!parentTry)
                 continue;
 
-            Debug.Log("je trouve " + parentTry.name+" from "+colliders[i].name);
+            //Debug.Log("je trouve " + parentTry.name+" from "+colliders[i].name);
             //Si on trouve pas le tag tank, on a rien a faire donc on continue
             if (parentTry.tag != "Tank")
                 continue;
 
-            Debug.Log("le tag tank fonctionne");
+            //Debug.Log("le tag tank fonctionne");
             PilotController scriptpilote = parentTry.GetComponent<PilotController>();
             //si y'a pas de script pilote on passe au collider suivant
             if (scriptpilote)

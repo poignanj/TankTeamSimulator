@@ -200,7 +200,7 @@
                     "continuous": false,
                     "passThrough": false,
                     "processors": "",
-                    "interactions": "",
+                    "interactions": "Press",
                     "bindings": []
                 },
                 {
@@ -210,7 +210,7 @@
                     "continuous": false,
                     "passThrough": false,
                     "processors": "",
-                    "interactions": "",
+                    "interactions": "Press",
                     "bindings": []
                 }
             ],
