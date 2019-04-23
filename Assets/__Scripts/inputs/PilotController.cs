@@ -1,4 +1,5 @@
-﻿using UnityEngine;
+﻿using System.Collections.Generic;
+using UnityEngine;
 using UnityEngine.Experimental.Input;
 
 
@@ -13,15 +14,18 @@ public class PilotController : MonoBehaviour, IPilotTankActions
 
 
     [SerializeField] private InputMaster inputMaster;
-    [SerializeField] public Transform leftTrack, rightTrack;
+    [SerializeField] public GameObject leftTrack, rightTrack;
+    private WheelCollider[] LeftWheels, RightWheels;
     [Space] [SerializeField] private float leftSpeed = 0, rightSpeed = 0, leftfloatspeed = 0, rightfloatspeed = 0;
     private bool onHold = false, leftdisabled = false, rightdisabled =false;
-    private float maxSpeed = 300, minSpeed = -150;
+    private float maxSpeed = 60, minSpeed = -30;
     private Rigidbody engine;
     private void Awake()
     {
         inputMaster.PilotTank.SetCallbacks(this);
         engine = this.GetComponent<Rigidbody>();
+        LeftWheels = leftTrack.GetComponentsInChildren<WheelCollider>();
+        RightWheels = rightTrack.GetComponentsInChildren<WheelCollider>();
     }
 
     private void Start()
@@ -41,14 +45,28 @@ public class PilotController : MonoBehaviour, IPilotTankActions
     private void Update()
     {
         //todo: Adjust speed scaling (percentile?) & Force position
-        engine.velocity.Set(0, 0, 0);
+        /*engine.velocity.Set(0, 0, 0);
         engine.angularVelocity.Set(0, 0, 0);
         Vector3 leftpos = leftTrack.position;
         Vector3 rightpos = rightTrack.position;
         //leftpos.y = engine.centerOfMass.y;
         //rightpos.y = engine.centerOfMass.y;
         engine.AddForceAtPosition(this.transform.forward.normalized * leftSpeed, leftpos);
-        engine.AddForceAtPosition(this.transform.forward.normalized * rightSpeed, rightpos);
+        engine.AddForceAtPosition(this.transform.forward.normalized * rightSpeed, rightpos);*/
+
+        //Right
+        foreach(WheelCollider wheel in LeftWheels)
+        {
+            wheel.motorTorque = leftSpeed;
+        }
+
+        //Left
+        foreach (WheelCollider wheel in RightWheels)
+        {
+            wheel.motorTorque = rightSpeed;
+        }
+
+
         EngineAudio();
     }
 

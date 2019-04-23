@@ -87,7 +87,7 @@ MeshCollider:
   m_GameObject: {fileID: 101842}
   m_Material: {fileID: 0}
   m_IsTrigger: 0
-  m_Enabled: 1
+  m_Enabled: 0
   serializedVersion: 3
   m_Convex: 1
   m_CookingOptions: 14
@@ -348,7 +348,7 @@ MeshCollider:
   m_GameObject: {fileID: 103946}
   m_Material: {fileID: 0}
   m_IsTrigger: 0
-  m_Enabled: 1
+  m_Enabled: 0
   serializedVersion: 3
   m_Convex: 1
   m_CookingOptions: 14
@@ -362,7 +362,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 455044}
-  - component: {fileID: 1740335701}
+  - component: {fileID: 7890309907282392807}
   m_Layer: 0
   m_Name: R_bone_2
   m_TagString: Tank
@@ -384,19 +384,36 @@ Transform:
   m_Father: {fileID: 499280}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!135 &1740335701
-SphereCollider:
+--- !u!146 &7890309907282392807
+WheelCollider:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 104760}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_Center: {x: 0, y: 0, z: 0.3}
+  m_Radius: 0.15
+  m_SuspensionSpring:
+    spring: 30
+    damper: 10
+    targetPosition: 0.5
+  m_SuspensionDistance: 0.3
+  m_ForceAppPointDistance: 0
+  m_Mass: 0.1
+  m_WheelDampingRate: 0.25
+  m_ForwardFriction:
+    m_ExtremumSlip: 0.1
+    m_ExtremumValue: 1
+    m_AsymptoteSlip: 0.2
+    m_AsymptoteValue: 0.5
+    m_Stiffness: 1
+  m_SidewaysFriction:
+    m_ExtremumSlip: 0.75
+    m_ExtremumValue: 0.75
+    m_AsymptoteSlip: 0.75
+    m_AsymptoteValue: 0.75
+    m_Stiffness: 1
   m_Enabled: 1
-  serializedVersion: 2
-  m_Radius: 0.01
-  m_Center: {x: 0, y: 0, z: 0}
 --- !u!1 &106878
 GameObject:
   m_ObjectHideFlags: 0
@@ -483,7 +500,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 469304}
-  - component: {fileID: 1180600888}
+  - component: {fileID: 6734457842105456647}
   m_Layer: 0
   m_Name: L_bone_3
   m_TagString: Tank
@@ -505,19 +522,36 @@ Transform:
   m_Father: {fileID: 463858}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!135 &1180600888
-SphereCollider:
+--- !u!146 &6734457842105456647
+WheelCollider:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 107298}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_Center: {x: 0, y: 0, z: 0.3}
+  m_Radius: 0.15
+  m_SuspensionSpring:
+    spring: 30
+    damper: 10
+    targetPosition: 0.5
+  m_SuspensionDistance: 0.3
+  m_ForceAppPointDistance: 0
+  m_Mass: 0.1
+  m_WheelDampingRate: 0.25
+  m_ForwardFriction:
+    m_ExtremumSlip: 0.1
+    m_ExtremumValue: 1
+    m_AsymptoteSlip: 0.2
+    m_AsymptoteValue: 0.5
+    m_Stiffness: 1
+  m_SidewaysFriction:
+    m_ExtremumSlip: 0.75
+    m_ExtremumValue: 0.75
+    m_AsymptoteSlip: 0.75
+    m_AsymptoteValue: 0.75
+    m_Stiffness: 1
   m_Enabled: 1
-  serializedVersion: 2
-  m_Radius: 0.01
-  m_Center: {x: 0, y: 0, z: 0}
 --- !u!1 &108204
 GameObject:
   m_ObjectHideFlags: 0
@@ -605,7 +639,7 @@ MeshCollider:
   m_GameObject: {fileID: 108204}
   m_Material: {fileID: 0}
   m_IsTrigger: 0
-  m_Enabled: 1
+  m_Enabled: 0
   serializedVersion: 3
   m_Convex: 1
   m_CookingOptions: 14
@@ -835,7 +869,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 476502}
-  - component: {fileID: 1487599981}
+  - component: {fileID: 4904179559551089087}
   m_Layer: 0
   m_Name: R_bone_8
   m_TagString: Tank
@@ -857,19 +891,36 @@ Transform:
   m_Father: {fileID: 499280}
   m_RootOrder: 7
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!135 &1487599981
-SphereCollider:
+--- !u!146 &4904179559551089087
+WheelCollider:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 116006}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_Center: {x: 0, y: 0, z: 0.3}
+  m_Radius: 0.15
+  m_SuspensionSpring:
+    spring: 30
+    damper: 10
+    targetPosition: 0.5
+  m_SuspensionDistance: 0.3
+  m_ForceAppPointDistance: 0
+  m_Mass: 0.1
+  m_WheelDampingRate: 0.25
+  m_ForwardFriction:
+    m_ExtremumSlip: 0.1
+    m_ExtremumValue: 1
+    m_AsymptoteSlip: 0.2
+    m_AsymptoteValue: 0.5
+    m_Stiffness: 1
+  m_SidewaysFriction:
+    m_ExtremumSlip: 0.75
+    m_ExtremumValue: 0.75
+    m_AsymptoteSlip: 0.75
+    m_AsymptoteValue: 0.75
+    m_Stiffness: 1
   m_Enabled: 1
-  serializedVersion: 2
-  m_Radius: 0.01
-  m_Center: {x: 0, y: 0, z: 0}
 --- !u!1 &117992
 GameObject:
   m_ObjectHideFlags: 0
@@ -956,7 +1007,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 467288}
-  - component: {fileID: 785819671}
+  - component: {fileID: 5421480684925611551}
   m_Layer: 0
   m_Name: L_bone_7
   m_TagString: Tank
@@ -978,19 +1029,36 @@ Transform:
   m_Father: {fileID: 463858}
   m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!135 &785819671
-SphereCollider:
+--- !u!146 &5421480684925611551
+WheelCollider:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 118352}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_Center: {x: 0, y: 0, z: 0.3}
+  m_Radius: 0.15
+  m_SuspensionSpring:
+    spring: 30
+    damper: 10
+    targetPosition: 0.5
+  m_SuspensionDistance: 0.3
+  m_ForceAppPointDistance: 0
+  m_Mass: 0.1
+  m_WheelDampingRate: 0.25
+  m_ForwardFriction:
+    m_ExtremumSlip: 0.1
+    m_ExtremumValue: 1
+    m_AsymptoteSlip: 0.2
+    m_AsymptoteValue: 0.5
+    m_Stiffness: 1
+  m_SidewaysFriction:
+    m_ExtremumSlip: 0.75
+    m_ExtremumValue: 0.75
+    m_AsymptoteSlip: 0.75
+    m_AsymptoteValue: 0.75
+    m_Stiffness: 1
   m_Enabled: 1
-  serializedVersion: 2
-  m_Radius: 0.01
-  m_Center: {x: 0, y: 0, z: 0}
 --- !u!1 &119922
 GameObject:
   m_ObjectHideFlags: 0
@@ -1077,7 +1145,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 466698}
-  - component: {fileID: 1999136320}
+  - component: {fileID: 5267781113373438258}
   m_Layer: 0
   m_Name: L_bone_1
   m_TagString: Tank
@@ -1099,19 +1167,36 @@ Transform:
   m_Father: {fileID: 463858}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!135 &1999136320
-SphereCollider:
+--- !u!146 &5267781113373438258
+WheelCollider:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 123320}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_Center: {x: 0, y: 0, z: 0.3}
+  m_Radius: 0.15
+  m_SuspensionSpring:
+    spring: 30
+    damper: 10
+    targetPosition: 0.5
+  m_SuspensionDistance: 0.3
+  m_ForceAppPointDistance: 0
+  m_Mass: 0.1
+  m_WheelDampingRate: 0.25
+  m_ForwardFriction:
+    m_ExtremumSlip: 0.1
+    m_ExtremumValue: 1
+    m_AsymptoteSlip: 0.2
+    m_AsymptoteValue: 0.5
+    m_Stiffness: 1
+  m_SidewaysFriction:
+    m_ExtremumSlip: 0.75
+    m_ExtremumValue: 0.75
+    m_AsymptoteSlip: 0.75
+    m_AsymptoteValue: 0.75
+    m_Stiffness: 1
   m_Enabled: 1
-  serializedVersion: 2
-  m_Radius: 0.01
-  m_Center: {x: 0, y: 0, z: 0}
 --- !u!1 &123350
 GameObject:
   m_ObjectHideFlags: 0
@@ -1199,7 +1284,7 @@ MeshCollider:
   m_GameObject: {fileID: 123350}
   m_Material: {fileID: 0}
   m_IsTrigger: 0
-  m_Enabled: 1
+  m_Enabled: 0
   serializedVersion: 3
   m_Convex: 1
   m_CookingOptions: 14
@@ -1368,7 +1453,7 @@ MeshCollider:
   m_GameObject: {fileID: 123494}
   m_Material: {fileID: 0}
   m_IsTrigger: 0
-  m_Enabled: 1
+  m_Enabled: 0
   serializedVersion: 3
   m_Convex: 1
   m_CookingOptions: 14
@@ -1506,7 +1591,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 468986}
-  - component: {fileID: 1007455059}
+  - component: {fileID: 8011557278247891007}
   m_Layer: 0
   m_Name: L_bone_2
   m_TagString: Tank
@@ -1528,19 +1613,36 @@ Transform:
   m_Father: {fileID: 463858}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!135 &1007455059
-SphereCollider:
+--- !u!146 &8011557278247891007
+WheelCollider:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 124254}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_Center: {x: 0, y: 0, z: 0.3}
+  m_Radius: 0.15
+  m_SuspensionSpring:
+    spring: 30
+    damper: 10
+    targetPosition: 0.5
+  m_SuspensionDistance: 0.3
+  m_ForceAppPointDistance: 0
+  m_Mass: 0.1
+  m_WheelDampingRate: 0.25
+  m_ForwardFriction:
+    m_ExtremumSlip: 0.1
+    m_ExtremumValue: 1
+    m_AsymptoteSlip: 0.2
+    m_AsymptoteValue: 0.5
+    m_Stiffness: 1
+  m_SidewaysFriction:
+    m_ExtremumSlip: 0.75
+    m_ExtremumValue: 0.75
+    m_AsymptoteSlip: 0.75
+    m_AsymptoteValue: 0.75
+    m_Stiffness: 1
   m_Enabled: 1
-  serializedVersion: 2
-  m_Radius: 0.01
-  m_Center: {x: 0, y: 0, z: 0}
 --- !u!1 &125590
 GameObject:
   m_ObjectHideFlags: 0
@@ -1550,7 +1652,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 443318}
-  - component: {fileID: 38911511}
+  - component: {fileID: 8493474787728487671}
   m_Layer: 0
   m_Name: L_bone_6
   m_TagString: Tank
@@ -1572,19 +1674,36 @@ Transform:
   m_Father: {fileID: 463858}
   m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!135 &38911511
-SphereCollider:
+--- !u!146 &8493474787728487671
+WheelCollider:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 125590}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_Center: {x: 0, y: 0, z: 0.3}
+  m_Radius: 0.15
+  m_SuspensionSpring:
+    spring: 30
+    damper: 10
+    targetPosition: 0.5
+  m_SuspensionDistance: 0.3
+  m_ForceAppPointDistance: 0
+  m_Mass: 0.1
+  m_WheelDampingRate: 0.25
+  m_ForwardFriction:
+    m_ExtremumSlip: 0.1
+    m_ExtremumValue: 1
+    m_AsymptoteSlip: 0.2
+    m_AsymptoteValue: 0.5
+    m_Stiffness: 1
+  m_SidewaysFriction:
+    m_ExtremumSlip: 0.75
+    m_ExtremumValue: 0.75
+    m_AsymptoteSlip: 0.75
+    m_AsymptoteValue: 0.75
+    m_Stiffness: 1
   m_Enabled: 1
-  serializedVersion: 2
-  m_Radius: 0.01
-  m_Center: {x: 0, y: 0, z: 0}
 --- !u!1 &126348
 GameObject:
   m_ObjectHideFlags: 0
@@ -1671,7 +1790,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 456518}
-  - component: {fileID: 1968123622}
   m_Layer: 0
   m_Name: L_bone_10
   m_TagString: Tank
@@ -1693,19 +1811,6 @@ Transform:
   m_Father: {fileID: 463858}
   m_RootOrder: 9
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!135 &1968123622
-SphereCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 127248}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Radius: 0.01
-  m_Center: {x: 0, y: 0, z: 0}
 --- !u!1 &132308
 GameObject:
   m_ObjectHideFlags: 0
@@ -1715,7 +1820,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 418734}
-  - component: {fileID: 1045998995}
+  - component: {fileID: 2028553173100583696}
   m_Layer: 0
   m_Name: R_bone_5
   m_TagString: Tank
@@ -1737,19 +1842,36 @@ Transform:
   m_Father: {fileID: 499280}
   m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!135 &1045998995
-SphereCollider:
+--- !u!146 &2028553173100583696
+WheelCollider:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 132308}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_Center: {x: 0, y: 0, z: 0.3}
+  m_Radius: 0.15
+  m_SuspensionSpring:
+    spring: 30
+    damper: 10
+    targetPosition: 0.5
+  m_SuspensionDistance: 0.3
+  m_ForceAppPointDistance: 0
+  m_Mass: 0.1
+  m_WheelDampingRate: 0.25
+  m_ForwardFriction:
+    m_ExtremumSlip: 0.1
+    m_ExtremumValue: 1
+    m_AsymptoteSlip: 0.2
+    m_AsymptoteValue: 0.5
+    m_Stiffness: 1
+  m_SidewaysFriction:
+    m_ExtremumSlip: 0.75
+    m_ExtremumValue: 0.75
+    m_AsymptoteSlip: 0.75
+    m_AsymptoteValue: 0.75
+    m_Stiffness: 1
   m_Enabled: 1
-  serializedVersion: 2
-  m_Radius: 0.01
-  m_Center: {x: 0, y: 0, z: 0}
 --- !u!1 &132706
 GameObject:
   m_ObjectHideFlags: 0
@@ -1759,7 +1881,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 432498}
-  - component: {fileID: 1414310394}
   m_Layer: 0
   m_Name: L_bone_11
   m_TagString: Tank
@@ -1781,19 +1902,6 @@ Transform:
   m_Father: {fileID: 463858}
   m_RootOrder: 10
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!135 &1414310394
-SphereCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 132706}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Radius: 0.01
-  m_Center: {x: 0, y: 0, z: 0}
 --- !u!1 &133626
 GameObject:
   m_ObjectHideFlags: 0
@@ -1881,7 +1989,7 @@ MeshCollider:
   m_GameObject: {fileID: 133626}
   m_Material: {fileID: 0}
   m_IsTrigger: 0
-  m_Enabled: 1
+  m_Enabled: 0
   serializedVersion: 3
   m_Convex: 1
   m_CookingOptions: 14
@@ -1973,7 +2081,7 @@ MeshCollider:
   m_GameObject: {fileID: 135050}
   m_Material: {fileID: 0}
   m_IsTrigger: 0
-  m_Enabled: 1
+  m_Enabled: 0
   serializedVersion: 3
   m_Convex: 1
   m_CookingOptions: 14
@@ -2389,7 +2497,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 449158}
-  - component: {fileID: 153996726}
+  - component: {fileID: 8897907429562589352}
   m_Layer: 0
   m_Name: R_bone_3
   m_TagString: Tank
@@ -2411,19 +2519,36 @@ Transform:
   m_Father: {fileID: 499280}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!135 &153996726
-SphereCollider:
+--- !u!146 &8897907429562589352
+WheelCollider:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 144734}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_Center: {x: 0, y: 0, z: 0.3}
+  m_Radius: 0.15
+  m_SuspensionSpring:
+    spring: 30
+    damper: 10
+    targetPosition: 0.5
+  m_SuspensionDistance: 0.3
+  m_ForceAppPointDistance: 0
+  m_Mass: 0.1
+  m_WheelDampingRate: 0.25
+  m_ForwardFriction:
+    m_ExtremumSlip: 0.1
+    m_ExtremumValue: 1
+    m_AsymptoteSlip: 0.2
+    m_AsymptoteValue: 0.5
+    m_Stiffness: 1
+  m_SidewaysFriction:
+    m_ExtremumSlip: 0.75
+    m_ExtremumValue: 0.75
+    m_AsymptoteSlip: 0.75
+    m_AsymptoteValue: 0.75
+    m_Stiffness: 1
   m_Enabled: 1
-  serializedVersion: 2
-  m_Radius: 0.01
-  m_Center: {x: 0, y: 0, z: 0}
 --- !u!1 &145906
 GameObject:
   m_ObjectHideFlags: 0
@@ -2545,7 +2670,7 @@ MeshCollider:
   m_GameObject: {fileID: 146548}
   m_Material: {fileID: 0}
   m_IsTrigger: 0
-  m_Enabled: 1
+  m_Enabled: 0
   serializedVersion: 3
   m_Convex: 1
   m_CookingOptions: 14
@@ -2559,7 +2684,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 406514}
-  - component: {fileID: 803019635}
+  - component: {fileID: 7742246788943485734}
   m_Layer: 0
   m_Name: L_bone_5
   m_TagString: Tank
@@ -2581,19 +2706,36 @@ Transform:
   m_Father: {fileID: 463858}
   m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!135 &803019635
-SphereCollider:
+--- !u!146 &7742246788943485734
+WheelCollider:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 149042}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_Center: {x: 0, y: 0, z: 0.3}
+  m_Radius: 0.15
+  m_SuspensionSpring:
+    spring: 30
+    damper: 10
+    targetPosition: 0.5
+  m_SuspensionDistance: 0.3
+  m_ForceAppPointDistance: 0
+  m_Mass: 0.1
+  m_WheelDampingRate: 0.25
+  m_ForwardFriction:
+    m_ExtremumSlip: 0.1
+    m_ExtremumValue: 1
+    m_AsymptoteSlip: 0.2
+    m_AsymptoteValue: 0.5
+    m_Stiffness: 1
+  m_SidewaysFriction:
+    m_ExtremumSlip: 0.75
+    m_ExtremumValue: 0.75
+    m_AsymptoteSlip: 0.75
+    m_AsymptoteValue: 0.75
+    m_Stiffness: 1
   m_Enabled: 1
-  serializedVersion: 2
-  m_Radius: 0.01
-  m_Center: {x: 0, y: 0, z: 0}
 --- !u!1 &149472
 GameObject:
   m_ObjectHideFlags: 0
@@ -2645,7 +2787,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 490108}
-  - component: {fileID: 2118096786}
   m_Layer: 0
   m_Name: L_bone_9
   m_TagString: Tank
@@ -2667,19 +2808,6 @@ Transform:
   m_Father: {fileID: 463858}
   m_RootOrder: 8
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!135 &2118096786
-SphereCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 154928}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Radius: 0.01
-  m_Center: {x: 0, y: 0, z: 0}
 --- !u!1 &156016
 GameObject:
   m_ObjectHideFlags: 0
@@ -2858,7 +2986,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 427090}
-  - component: {fileID: 632592265}
   m_Layer: 0
   m_Name: L_bone_12
   m_TagString: Tank
@@ -2880,19 +3007,6 @@ Transform:
   m_Father: {fileID: 463858}
   m_RootOrder: 11
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!135 &632592265
-SphereCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 160502}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Radius: 0.01
-  m_Center: {x: 0, y: 0, z: 0}
 --- !u!1 &161110
 GameObject:
   m_ObjectHideFlags: 0
@@ -3072,7 +3186,7 @@ MeshCollider:
   m_GameObject: {fileID: 165002}
   m_Material: {fileID: 0}
   m_IsTrigger: 0
-  m_Enabled: 1
+  m_Enabled: 0
   serializedVersion: 3
   m_Convex: 1
   m_CookingOptions: 14
@@ -3164,7 +3278,7 @@ MeshCollider:
   m_GameObject: {fileID: 165832}
   m_Material: {fileID: 0}
   m_IsTrigger: 0
-  m_Enabled: 1
+  m_Enabled: 0
   serializedVersion: 3
   m_Convex: 1
   m_CookingOptions: 14
@@ -3347,7 +3461,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 463340}
-  - component: {fileID: 824245592}
+  - component: {fileID: 1196546001120796379}
   m_Layer: 0
   m_Name: L_bone_4
   m_TagString: Tank
@@ -3369,19 +3483,36 @@ Transform:
   m_Father: {fileID: 463858}
   m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!135 &824245592
-SphereCollider:
+--- !u!146 &1196546001120796379
+WheelCollider:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 168648}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_Center: {x: 0, y: 0, z: 0.3}
+  m_Radius: 0.15
+  m_SuspensionSpring:
+    spring: 30
+    damper: 10
+    targetPosition: 0.5
+  m_SuspensionDistance: 0.3
+  m_ForceAppPointDistance: 0
+  m_Mass: 0.1
+  m_WheelDampingRate: 0.25
+  m_ForwardFriction:
+    m_ExtremumSlip: 0.1
+    m_ExtremumValue: 1
+    m_AsymptoteSlip: 0.2
+    m_AsymptoteValue: 0.5
+    m_Stiffness: 1
+  m_SidewaysFriction:
+    m_ExtremumSlip: 0.75
+    m_ExtremumValue: 0.75
+    m_AsymptoteSlip: 0.75
+    m_AsymptoteValue: 0.75
+    m_Stiffness: 1
   m_Enabled: 1
-  serializedVersion: 2
-  m_Radius: 0.01
-  m_Center: {x: 0, y: 0, z: 0}
 --- !u!1 &169446
 GameObject:
   m_ObjectHideFlags: 0
@@ -3391,7 +3522,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 435402}
-  - component: {fileID: 151254474}
+  - component: {fileID: 8719584642508790371}
   m_Layer: 0
   m_Name: R_bone_7
   m_TagString: Tank
@@ -3413,19 +3544,36 @@ Transform:
   m_Father: {fileID: 499280}
   m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!135 &151254474
-SphereCollider:
+--- !u!146 &8719584642508790371
+WheelCollider:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 169446}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_Center: {x: 0, y: 0, z: 0.3}
+  m_Radius: 0.15
+  m_SuspensionSpring:
+    spring: 30
+    damper: 10
+    targetPosition: 0.5
+  m_SuspensionDistance: 0.3
+  m_ForceAppPointDistance: 0
+  m_Mass: 0.1
+  m_WheelDampingRate: 0.25
+  m_ForwardFriction:
+    m_ExtremumSlip: 0.1
+    m_ExtremumValue: 1
+    m_AsymptoteSlip: 0.2
+    m_AsymptoteValue: 0.5
+    m_Stiffness: 1
+  m_SidewaysFriction:
+    m_ExtremumSlip: 0.75
+    m_ExtremumValue: 0.75
+    m_AsymptoteSlip: 0.75
+    m_AsymptoteValue: 0.75
+    m_Stiffness: 1
   m_Enabled: 1
-  serializedVersion: 2
-  m_Radius: 0.01
-  m_Center: {x: 0, y: 0, z: 0}
 --- !u!1 &169506
 GameObject:
   m_ObjectHideFlags: 0
@@ -3605,7 +3753,7 @@ MeshCollider:
   m_GameObject: {fileID: 171132}
   m_Material: {fileID: 0}
   m_IsTrigger: 0
-  m_Enabled: 1
+  m_Enabled: 0
   serializedVersion: 3
   m_Convex: 1
   m_CookingOptions: 14
@@ -3619,7 +3767,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 441040}
-  - component: {fileID: 1686669688}
+  - component: {fileID: 1407361639992218730}
   m_Layer: 0
   m_Name: R_bone_1
   m_TagString: Tank
@@ -3641,19 +3789,36 @@ Transform:
   m_Father: {fileID: 499280}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!135 &1686669688
-SphereCollider:
+--- !u!146 &1407361639992218730
+WheelCollider:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 172014}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_Center: {x: 0, y: 0, z: 0.3}
+  m_Radius: 0.15
+  m_SuspensionSpring:
+    spring: 30
+    damper: 10
+    targetPosition: 0.5
+  m_SuspensionDistance: 0.3
+  m_ForceAppPointDistance: 0
+  m_Mass: 0.1
+  m_WheelDampingRate: 0.25
+  m_ForwardFriction:
+    m_ExtremumSlip: 0.1
+    m_ExtremumValue: 1
+    m_AsymptoteSlip: 0.2
+    m_AsymptoteValue: 0.5
+    m_Stiffness: 1
+  m_SidewaysFriction:
+    m_ExtremumSlip: 0.75
+    m_ExtremumValue: 0.75
+    m_AsymptoteSlip: 0.75
+    m_AsymptoteValue: 0.75
+    m_Stiffness: 1
   m_Enabled: 1
-  serializedVersion: 2
-  m_Radius: 0.01
-  m_Center: {x: 0, y: 0, z: 0}
 --- !u!1 &172158
 GameObject:
   m_ObjectHideFlags: 0
@@ -3663,7 +3828,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 426552}
-  - component: {fileID: 1221381086}
   m_Layer: 0
   m_Name: R_bone_10
   m_TagString: Tank
@@ -3685,19 +3849,6 @@ Transform:
   m_Father: {fileID: 499280}
   m_RootOrder: 9
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!135 &1221381086
-SphereCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 172158}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Radius: 0.01
-  m_Center: {x: 0, y: 0, z: 0}
 --- !u!1 &172434
 GameObject:
   m_ObjectHideFlags: 0
@@ -3877,7 +4028,7 @@ MeshCollider:
   m_GameObject: {fileID: 173118}
   m_Material: {fileID: 0}
   m_IsTrigger: 0
-  m_Enabled: 1
+  m_Enabled: 0
   serializedVersion: 3
   m_Convex: 1
   m_CookingOptions: 14
@@ -3891,7 +4042,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 444362}
-  - component: {fileID: 1742325057}
   m_Layer: 0
   m_Name: R_bone_12
   m_TagString: Tank
@@ -3913,19 +4063,6 @@ Transform:
   m_Father: {fileID: 499280}
   m_RootOrder: 11
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!135 &1742325057
-SphereCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 174344}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Radius: 0.01
-  m_Center: {x: 0, y: 0, z: 0}
 --- !u!1 &177226
 GameObject:
   m_ObjectHideFlags: 0
@@ -4413,8 +4550,8 @@ MonoBehaviour:
         m_Calls: []
       m_TypeName: InputMaster+ActionEvent, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
         PublicKeyToken=null
-  leftTrack: {fileID: 481724}
-  rightTrack: {fileID: 431070}
+  leftTrack: {fileID: 149472}
+  rightTrack: {fileID: 194110}
   leftSpeed: 0
   rightSpeed: 0
   leftfloatspeed: 0
@@ -4822,7 +4959,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 429296}
-  - component: {fileID: 838514749}
+  - component: {fileID: 8029713147943905734}
   m_Layer: 0
   m_Name: L_bone_8
   m_TagString: Tank
@@ -4844,19 +4981,36 @@ Transform:
   m_Father: {fileID: 463858}
   m_RootOrder: 7
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!135 &838514749
-SphereCollider:
+--- !u!146 &8029713147943905734
+WheelCollider:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 181154}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_Center: {x: 0, y: 0, z: 0.3}
+  m_Radius: 0.15
+  m_SuspensionSpring:
+    spring: 30
+    damper: 10
+    targetPosition: 0.5
+  m_SuspensionDistance: 0.3
+  m_ForceAppPointDistance: 0
+  m_Mass: 0.1
+  m_WheelDampingRate: 0.25
+  m_ForwardFriction:
+    m_ExtremumSlip: 0.1
+    m_ExtremumValue: 1
+    m_AsymptoteSlip: 0.2
+    m_AsymptoteValue: 0.5
+    m_Stiffness: 1
+  m_SidewaysFriction:
+    m_ExtremumSlip: 0.75
+    m_ExtremumValue: 0.75
+    m_AsymptoteSlip: 0.75
+    m_AsymptoteValue: 0.75
+    m_Stiffness: 1
   m_Enabled: 1
-  serializedVersion: 2
-  m_Radius: 0.01
-  m_Center: {x: 0, y: 0, z: 0}
 --- !u!1 &181638
 GameObject:
   m_ObjectHideFlags: 0
@@ -5113,7 +5267,7 @@ MeshCollider:
   m_GameObject: {fileID: 182124}
   m_Material: {fileID: 0}
   m_IsTrigger: 0
-  m_Enabled: 1
+  m_Enabled: 0
   serializedVersion: 3
   m_Convex: 1
   m_CookingOptions: 14
@@ -5127,7 +5281,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 434768}
-  - component: {fileID: 1967644442}
+  - component: {fileID: 6824624011649798165}
   m_Layer: 0
   m_Name: R_bone_6
   m_TagString: Tank
@@ -5149,19 +5303,36 @@ Transform:
   m_Father: {fileID: 499280}
   m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!135 &1967644442
-SphereCollider:
+--- !u!146 &6824624011649798165
+WheelCollider:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 183256}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_Center: {x: 0, y: 0, z: 0.3}
+  m_Radius: 0.15
+  m_SuspensionSpring:
+    spring: 30
+    damper: 10
+    targetPosition: 0.5
+  m_SuspensionDistance: 0.3
+  m_ForceAppPointDistance: 0
+  m_Mass: 0.1
+  m_WheelDampingRate: 0.25
+  m_ForwardFriction:
+    m_ExtremumSlip: 0.1
+    m_ExtremumValue: 1
+    m_AsymptoteSlip: 0.2
+    m_AsymptoteValue: 0.5
+    m_Stiffness: 1
+  m_SidewaysFriction:
+    m_ExtremumSlip: 0.75
+    m_ExtremumValue: 0.75
+    m_AsymptoteSlip: 0.75
+    m_AsymptoteValue: 0.75
+    m_Stiffness: 1
   m_Enabled: 1
-  serializedVersion: 2
-  m_Radius: 0.01
-  m_Center: {x: 0, y: 0, z: 0}
 --- !u!1 &184526
 GameObject:
   m_ObjectHideFlags: 0
@@ -5548,7 +5719,7 @@ MeshCollider:
   m_GameObject: {fileID: 189582}
   m_Material: {fileID: 0}
   m_IsTrigger: 0
-  m_Enabled: 1
+  m_Enabled: 0
   serializedVersion: 3
   m_Convex: 1
   m_CookingOptions: 14
@@ -5562,7 +5733,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 478320}
-  - component: {fileID: 969788674}
   m_Layer: 0
   m_Name: R_bone_11
   m_TagString: Tank
@@ -5584,19 +5754,6 @@ Transform:
   m_Father: {fileID: 499280}
   m_RootOrder: 10
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!135 &969788674
-SphereCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 189938}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Radius: 0.01
-  m_Center: {x: 0, y: 0, z: 0}
 --- !u!1 &190166
 GameObject:
   m_ObjectHideFlags: 0
@@ -5606,7 +5763,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 452354}
-  - component: {fileID: 1202949740}
+  - component: {fileID: 1339491283592736834}
   m_Layer: 0
   m_Name: R_bone_4
   m_TagString: Tank
@@ -5628,19 +5785,36 @@ Transform:
   m_Father: {fileID: 499280}
   m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!135 &1202949740
-SphereCollider:
+--- !u!146 &1339491283592736834
+WheelCollider:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 190166}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_Center: {x: 0, y: 0, z: 0.3}
+  m_Radius: 0.15
+  m_SuspensionSpring:
+    spring: 30
+    damper: 10
+    targetPosition: 0.5
+  m_SuspensionDistance: 0.3
+  m_ForceAppPointDistance: 0
+  m_Mass: 0.1
+  m_WheelDampingRate: 0.25
+  m_ForwardFriction:
+    m_ExtremumSlip: 0.1
+    m_ExtremumValue: 1
+    m_AsymptoteSlip: 0.2
+    m_AsymptoteValue: 0.5
+    m_Stiffness: 1
+  m_SidewaysFriction:
+    m_ExtremumSlip: 0.75
+    m_ExtremumValue: 0.75
+    m_AsymptoteSlip: 0.75
+    m_AsymptoteValue: 0.75
+    m_Stiffness: 1
   m_Enabled: 1
-  serializedVersion: 2
-  m_Radius: 0.01
-  m_Center: {x: 0, y: 0, z: 0}
 --- !u!1 &190716
 GameObject:
   m_ObjectHideFlags: 0
@@ -6142,7 +6316,7 @@ MeshCollider:
   m_GameObject: {fileID: 197326}
   m_Material: {fileID: 0}
   m_IsTrigger: 0
-  m_Enabled: 1
+  m_Enabled: 0
   serializedVersion: 3
   m_Convex: 1
   m_CookingOptions: 14
@@ -6234,7 +6408,7 @@ MeshCollider:
   m_GameObject: {fileID: 198346}
   m_Material: {fileID: 0}
   m_IsTrigger: 0
-  m_Enabled: 1
+  m_Enabled: 0
   serializedVersion: 3
   m_Convex: 1
   m_CookingOptions: 14
@@ -6325,7 +6499,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 464408}
-  - component: {fileID: 764021109}
   m_Layer: 0
   m_Name: R_bone_9
   m_TagString: Tank
@@ -6347,19 +6520,6 @@ Transform:
   m_Father: {fileID: 499280}
   m_RootOrder: 8
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!135 &764021109
-SphereCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 199318}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Radius: 0.01
-  m_Center: {x: 0, y: 0, z: 0}
 --- !u!1 &302039397
 GameObject:
   m_ObjectHideFlags: 0
@@ -8253,6 +8413,14 @@ PrefabInstance:
       propertyPath: vertices.Array.data[7].z
       value: 0.9
       objectReference: {fileID: 0}
+    - target: {fileID: 3380982, guid: 4d293c8e162f3874b982baadd71153d2, type: 3}
+      propertyPath: m_Mesh
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 2348914, guid: 4d293c8e162f3874b982baadd71153d2, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 0}
     - target: {fileID: 124034, guid: 4d293c8e162f3874b982baadd71153d2, type: 3}
       propertyPath: m_TagString
       value: Tank
@@ -8308,15 +8476,15 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 241111826752622858}
   m_PrefabAsset: {fileID: 0}
---- !u!4 &241111826752486694 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: 420908, guid: 4d293c8e162f3874b982baadd71153d2,
-    type: 3}
-  m_PrefabInstance: {fileID: 241111826752622858}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1 &241111826752714120 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 124034, guid: 4d293c8e162f3874b982baadd71153d2,
+    type: 3}
+  m_PrefabInstance: {fileID: 241111826752622858}
+  m_PrefabAsset: {fileID: 0}
+--- !u!4 &241111826752486694 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 420908, guid: 4d293c8e162f3874b982baadd71153d2,
     type: 3}
   m_PrefabInstance: {fileID: 241111826752622858}
   m_PrefabAsset: {fileID: 0}
