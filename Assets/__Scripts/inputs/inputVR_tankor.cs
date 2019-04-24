@@ -9,13 +9,21 @@ public class inputVR_tankor : MonoBehaviour
     [Space] [SerializeField] private Transform Left, Right;
     [Space] [SerializeField] private GameObject Spawn_GO_R, Spawn_GO_G;
     private GameObject FlagRed, FlagGreen; //Aff0
-
+    private GameObject CameraVR;
+    
+    private int defMask;
     [SerializeField] private GameObject gunner;
     [SerializeField] private GameObject pilot;
+
+
+    [Space] public Canvas proneCanvas;
     // Start is called before the first frame update
     void Start()
     {
-        
+        CameraVR = GetComponentInChildren<Camera>().gameObject;
+        //defMask = CameraVR.GetComponent<Camera>().cullingMask;
+        //proneCanvas = CameraVR.GetComponentInChildren<Canvas>();
+        proneCanvas.enabled=false;
     }
 
     // Update is called once per frame
@@ -24,7 +32,6 @@ public class inputVR_tankor : MonoBehaviour
         if(SteamVR_Input.GetStateDown("InteractUI", SteamVR_Input_Sources.RightHand))
         {
             Debug.Log("Try Hit Right");
-            //Todo: Send message (distance & direction) to Artillery
             RaycastHit hit;
             if(Physics.Raycast(Right.position, Right.TransformDirection(Vector3.forward), out hit, Mathf.Infinity))
             {
@@ -60,6 +67,9 @@ public class inputVR_tankor : MonoBehaviour
         {
             //todo: disable
             Debug.Log("J'suis caché");
+            proneCanvas.enabled =true;
+            //CameraVR.GetComponent<Camera>().cullingMask = 0;
+            //CameraVR.GetComponent<Camera>().clearFlags = CameraClearFlags.Color;
         }
     }
     private void OnTriggerExit(Collider other)
@@ -68,6 +78,9 @@ public class inputVR_tankor : MonoBehaviour
         {
             //todo: disable
             Debug.Log("J'suis debout");
+            proneCanvas.enabled =false;
+            //CameraVR.GetComponent<Camera>().cullingMask = defMask;
+            //CameraVR.GetComponent<Camera>().clearFlags = CameraClearFlags.Skybox;
         }
     }
 

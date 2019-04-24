@@ -6,8 +6,10 @@ using UnityEngine.UI;
 public class TankHealth : MonoBehaviour
 {
     public float m_StartingHealth = 100f;
-    public Slider m_Slider;
-    public Image m_FillImage;
+    public Slider slider_chef;
+    public Slider slider_pilote;
+    public Slider slider_tireur;
+    public Image fill_chef; public Image fill_pilote; public Image fill_tireur;
     public Color m_FullHealthColor = Color.green;
     public Color m_ZeroHealthColor = Color.red;
     public GameObject m_ExplosionPrefab;
@@ -51,8 +53,12 @@ public class TankHealth : MonoBehaviour
     private void SetHealthUI()
     {
         // Adjust the value and colour of the slider.
-        m_Slider.value = m_CurrentHealth;
-        m_FillImage.color = Color.Lerp(m_ZeroHealthColor, m_FullHealthColor, m_CurrentHealth / m_StartingHealth);
+        slider_chef.value = m_CurrentHealth;
+        slider_pilote.value = m_CurrentHealth;
+        slider_tireur.value = m_CurrentHealth;
+        fill_chef.color = Color.Lerp(m_ZeroHealthColor, m_FullHealthColor, m_CurrentHealth / m_StartingHealth);
+        fill_pilote.color = Color.Lerp(m_ZeroHealthColor, m_FullHealthColor, m_CurrentHealth / m_StartingHealth);
+        fill_tireur.color = Color.Lerp(m_ZeroHealthColor, m_FullHealthColor, m_CurrentHealth / m_StartingHealth);
 
     }
 

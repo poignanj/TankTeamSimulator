@@ -8,6 +8,7 @@ public class CompassGunner : MonoBehaviour
 	public Text CompassDirectionText;
     public Text TargetDirectionText;
     public Transform Target;
+
     public void Update()
 	{
         //Get a handle on the Image's uvRect
