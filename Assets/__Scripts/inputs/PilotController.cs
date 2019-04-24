@@ -19,6 +19,7 @@ public class PilotController : MonoBehaviour, IPilotTankActions
     [Space] [SerializeField] private float leftSpeed = 0, rightSpeed = 0, leftfloatspeed = 0, rightfloatspeed = 0;
     private bool onHold = false, leftdisabled = false, rightdisabled =false;
     private float maxSpeed = 60, minSpeed = -30;
+    private float gear = 5f;
     private Rigidbody engine;
     private void Awake()
     {
@@ -75,7 +76,7 @@ public class PilotController : MonoBehaviour, IPilotTankActions
         if (!leftdisabled)
         {
             var direction = context.ReadValue<float>();
-            leftSpeed += direction;
+            leftSpeed = direction*gear;
         }
         if(leftSpeed < minSpeed)
         {
@@ -89,10 +90,11 @@ public class PilotController : MonoBehaviour, IPilotTankActions
 
     public void OnMoveRightLever(InputAction.CallbackContext context)
     {
+        
         if (!rightdisabled)
         {
             var direction = context.ReadValue<float>();
-            rightSpeed += direction;
+            rightSpeed = direction*gear;
         }
         if (rightSpeed < minSpeed)
         {
