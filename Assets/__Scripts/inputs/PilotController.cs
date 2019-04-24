@@ -1,7 +1,7 @@
 ﻿using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Experimental.Input;
-
+using UnityEngine.UI;
 
 public class PilotController : MonoBehaviour, IPilotTankActions
 {
@@ -11,6 +11,9 @@ public class PilotController : MonoBehaviour, IPilotTankActions
     public AudioClip m_EngineDriving;           // Audio to play when the tank is moving.
     private float m_OriginalPitch;              // The pitch of the audio source at the start of the scene.
     public float m_PitchRange = 0.2f;           // The amount by which the pitch of the engine noises can vary.
+    public GameObject chenilledroite;
+    public GameObject chenillegauche;
+
 
 
     [SerializeField] private InputMaster inputMaster;
@@ -26,6 +29,9 @@ public class PilotController : MonoBehaviour, IPilotTankActions
         engine = this.GetComponent<Rigidbody>();
         LeftWheels = leftTrack.GetComponentsInChildren<WheelCollider>();
         RightWheels = rightTrack.GetComponentsInChildren<WheelCollider>();
+        chenilledroite.SetActive(false);
+        chenillegauche.SetActive(false);
+
     }
 
     private void Start()
@@ -158,12 +164,15 @@ public class PilotController : MonoBehaviour, IPilotTankActions
     {
         rightdisabled = false;
         leftdisabled = false;
+        chenilledroite.SetActive(false);
+        chenillegauche.SetActive(false);
     }
 
     public void DisableLeft()
     {
         Debug.Log("Left has been disabled");
         leftdisabled = true;
+        chenillegauche.SetActive(true);
         leftSpeed = 0;
         if (rightSpeed > 50)
         {
@@ -178,6 +187,7 @@ public class PilotController : MonoBehaviour, IPilotTankActions
     {
         Debug.Log("Right has been disabled");
         rightdisabled = true;
+        chenilledroite.SetActive(true);
         rightSpeed = 0;
         if (leftSpeed > 50)
         {

@@ -53,13 +53,15 @@ public class TankHealth : MonoBehaviour
     private void SetHealthUI()
     {
         // Adjust the value and colour of the slider.
-        slider_chef.value = m_CurrentHealth;
-        slider_pilote.value = m_CurrentHealth;
-        slider_tireur.value = m_CurrentHealth;
-        fill_chef.color = Color.Lerp(m_ZeroHealthColor, m_FullHealthColor, m_CurrentHealth / m_StartingHealth);
-        fill_pilote.color = Color.Lerp(m_ZeroHealthColor, m_FullHealthColor, m_CurrentHealth / m_StartingHealth);
-        fill_tireur.color = Color.Lerp(m_ZeroHealthColor, m_FullHealthColor, m_CurrentHealth / m_StartingHealth);
-
+        if (slider_chef)
+        {
+            slider_chef.value = m_CurrentHealth;
+            slider_pilote.value = m_CurrentHealth;
+            slider_tireur.value = m_CurrentHealth;
+            fill_chef.color = Color.Lerp(m_ZeroHealthColor, m_FullHealthColor, m_CurrentHealth / m_StartingHealth);
+            fill_pilote.color = Color.Lerp(m_ZeroHealthColor, m_FullHealthColor, m_CurrentHealth / m_StartingHealth);
+            fill_tireur.color = Color.Lerp(m_ZeroHealthColor, m_FullHealthColor, m_CurrentHealth / m_StartingHealth);
+        }
     }
 
 
